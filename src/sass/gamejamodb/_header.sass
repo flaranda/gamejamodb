@@ -1,0 +1,23 @@
+.fixed-top
+  position: fixed
+  margin: 0 auto !important
+
+.navigation
+  background-color: black
+  padding-top: 1em
+  padding-bottom: 1em
+
+.navigation-item
+  padding-right: 5em
+  &:nth-of-type(5)
+    padding-right: 0em
+
+  @include montserrat-regular( 0.85em )
+
+.navigation-link
+  color: white
+  cursor: pointer
+  &:hover
+    color: gray
+  &.selected
+    color: gray

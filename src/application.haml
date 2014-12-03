@@ -1,9 +1,49 @@
 %html
   %link{ type: "text/css", rel: "stylesheet", media: "all", href: "css/application.min.css" }
   %head
+    %meta{ content: "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
     %title Game Jam ODB
-  %body
-    %header
-    %section
-      .row
-        hola
+  %body{style: "background-color: #888;"}
+    %header.section.row.navigation
+      %span.navigation-item
+        %a.navigation-link{ title: "Info" }
+          INFO
+      %span.navigation-item
+        %a.navigation-link{ title: "Programa" }
+          PROGRAMA
+      %span.navigation-item
+        %a.navigation-link{ title: "Entradas" }
+          ENTRADAS
+      %span.navigation-item
+        %a.navigation-link{ title: "Coaches" }
+          COACHES
+      %span.navigation-item
+        %a.navigation-link{ title: "Organización" }
+          ORGANIZACIÓN
+    %main
+      %section.section.row.presentation
+        .presentation-title
+          GAME JAM ODB
+        .presentation-info
+          %div
+            Primera Game Jam en Córdoba (España)
+          %div
+            23-25 Enero 2015
+        .presentation-organize
+          ORGANIZA
+        .row.presentation-organizers
+          %a.two.columns.push_four{ href: "http://www.devsdungeons.com", title: "Devs&Dungeons", target: "_blank" }
+            %img{ src: "http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2009/9/24/1253807276915/Nicolas-Cage-001.jpg", alt: "Devs&Dungeons", title: "Devs&Dungeons" }
+          %a.two.columns{ href: "http://www.cosfera.com", title: "coSfera", target: "_blank" }
+            %img{ src: "http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2009/9/24/1253807276915/Nicolas-Cage-001.jpg", alt: "coSfera", title: "coSfera" }
+      %section.section.row.info
+        .section-title
+          ¿QUÉ ME ESTÁS CONTAINER?
+        .section-info
+          Pues eso, como una hackaton pero de videojuegos y a nuestro rollo.
+        %hr.section-hr
+      %section.section.row.program{ style: "background-color: white;"}
+        .section-title
+          ¿QUÉ ME ESTÁS CONTAINER?
+        .section-info
+          Pues eso, como una hackaton pero de videojuegos y a nuestro rollo.

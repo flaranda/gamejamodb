@@ -1,0 +1,36 @@
+/*---COLORS-----------------------------------------------------------*/
+
+/*---MIXINGS----------------------------------------------------------*/
+@mixin allbrow( $property, $value... ) {
+  -webkit-#{$property}:$value;
+  -moz-#{$property}:$value;
+  -ms-#{$property}:$value;
+  -o-#{$property}:$value;
+  #{$property}:$value;
+}
+
+/*---FONTS------------------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@mixin montserrat-regular( $size ) {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: $size;
+}
+@mixin montserrat-bold( $size ) {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: $size;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Arvo:400,400italic);
+@mixin arvo-regular( $size ) {
+  font-family: 'Arvo', serif;
+  font-weight: 400;
+  font-size: $size;
+}
+@mixin arvo-italic( $size ) {
+  font-family: 'Arvo', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: $size;
+}

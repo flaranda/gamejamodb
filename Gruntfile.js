@@ -42,6 +42,9 @@ module.exports = function( grunt ) {
         files: ["src/**"],
         tasks: "default"
       }
+    },
+    exec: {
+      removeCompiled: "rm -rf compiled"
     }
   });
 
@@ -50,6 +53,7 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks( "grunt-contrib-cssmin" );
   grunt.loadNpmTasks( "grunt-contrib-compass" );
   grunt.loadNpmTasks( "grunt-haml2html" );
+  grunt.loadNpmTasks( "grunt-exec");
 
-  grunt.registerTask( "default", ["haml", "compass", "cssmin", "copy", "watch"] );
+  grunt.registerTask( "default", [ "exec:removeCompiled", "haml", "compass", "cssmin", "copy", "watch"] );
 };
