@@ -1,2 +1,23 @@
 .info
   background-color: white
+
+.bubble-down
+  width: 100%
+  position: relative
+  padding: 0em
+  background-color: #444
+  @include allbrow( border-radius, 10px )
+  color: white
+
+.bubble-down:after
+  content: ''
+  position: absolute
+  border-style: solid
+  border-width: 15px 15px 0
+  border-color: #444 transparent
+  display: block
+  width: 0
+  z-index: 1
+  margin-left: -15px
+  bottom: -15px
+  left: 25%
