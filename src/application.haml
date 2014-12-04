@@ -2,8 +2,9 @@
   %link{ type: "text/css", rel: "stylesheet", media: "all", href: "css/application.min.css" }
   %head
     %meta{ content: "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
+    %meta{ content: "width=device-width, initial-scale=1", name: "viewport" }
     %title Game Jam ODB
-  %body{style: "background-color: #888;"}
+  %body
     %header.section.navigation
       .row
         %span.navigation-item
@@ -35,9 +36,9 @@
             ORGANIZA
           .row.presentation-organizers
             %a.two.columns.push_four{ href: "http://www.devsdungeons.com", title: "Devs&Dungeons", target: "_blank" }
-              %img{ src: "http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2009/9/24/1253807276915/Nicolas-Cage-001.jpg", alt: "Devs&Dungeons", title: "Devs&Dungeons" }
+              %img{ src: "img/nic1.jpg", alt: "Devs&Dungeons", title: "Devs&Dungeons" }
             %a.two.columns{ href: "http://www.cosfera.com", title: "coSfera", target: "_blank" }
-              %img{ src: "http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2009/9/24/1253807276915/Nicolas-Cage-001.jpg", alt: "coSfera", title: "coSfera" }
+              %img{ src: "img/nic1.jpg", alt: "coSfera", title: "coSfera" }
       %section.section.info
         .row
           .section-title
@@ -45,7 +46,7 @@
           .section-info
             Pues eso, como una hackaton pero de videojuegos y a nuestro rollo.
           .row
-            .four.columns.push_one
+            .four.columns
               .row.bubble-container
                 .bubble.bubble-down
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum, mi
@@ -54,7 +55,7 @@
                 .bubble.bubble-down
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum, mi
                   mi tempor eros, sed efficitur lectus enim pellentesque lectus.
-            .six.columns
+            .seven.columns.push_one
               .row.bubble-container
                 .bubble.bubble-down
                   %div
@@ -68,15 +69,62 @@
                     sed congue posuere, ligula tortor aliquet enim, eu varius risus erat ac tortor. Ut facilisis scelerisque neque id placerat. Donec et nibh sed leo ultrices
                     varius non a neque. Ut vel turpis ornare, pellentesque velit non, luctus eros.
           .row
-            .ten.columns.push_one
-              .bubble-container
-                .bubble.bubble-up
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
-                  mi mi tempor eros, sed efficitur lectus enim pellentesque lectus. Vivamus accumsan mi augue, a semper arcu viverra sit amet. Suspendisse ultrices, magna
-                  sed congue posuere, ligula tortor aliquet enim, eu varius risus erat ac tortor. Ut facilisis scelerisque neque id placerat. Donec et nibh sed leo ultrices
-                  varius non a neque. Ut vel turpis ornare, pellentesque velit non, luctus eros.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
-                  mi mi tempor eros, sed efficitur lectus enim pellentesque lectus. Vivamus accumsan mi augue, a semper arcu viverra sit amet. Suspendisse ultrices, magna
-                  sed congue posuere, ligula tortor aliquet enim, eu varius risus erat ac tortor. Ut facilisis scelerisque neque id placerat. Donec et nibh sed leo ultrices
-                  varius non a neque. Ut vel turpis ornare, pellentesque velit non, luctus eros.
+            .bubble.bubble-up
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
+              mi mi tempor eros, sed efficitur lectus enim pellentesque lectus. Vivamus accumsan mi augue, a semper arcu viverra sit amet. Suspendisse ultrices, magna
+              sed congue posuere, ligula tortor aliquet enim, eu varius risus erat ac tortor. Ut facilisis scelerisque neque id placerat. Donec et nibh sed leo ultrices
+              varius non a neque. Ut vel turpis ornare, pellentesque velit non, luctus eros.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
+              mi mi tempor eros, sed efficitur lectus enim pellentesque lectus. Vivamus accumsan mi augue, a semper arcu viverra sit amet. Suspendisse ultrices, magna
+              sed congue posuere, ligula tortor aliquet enim, eu varius risus erat ac tortor. Ut facilisis scelerisque neque id placerat. Donec et nibh sed leo ultrices
+              varius non a neque. Ut vel turpis ornare, pellentesque velit non, luctus eros.
           %hr.section-hr
+      %section.section.coaches
+        .row
+          .section-title
+            COACHES
+          .section-info
+            Diferentes profesionales del sector te iluminarán con su sabiduria.
+          .row
+            .four.columns
+              .coach-image-container
+                %img.coach-image{ src: "img/nic2.jpg" }
+              %p.coach-name
+                NICOLAS CAGE
+              .coach-social
+              .coach-bio
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
+                mi mi tempor eros, sed efficitur lectus enim pellentesque lectus.
+            .four.columns
+              .coach-image-container
+                %img.coach-image{ src: "img/nic2.jpg" }
+              %p.coach-name
+                NICOLAS CAGE
+              .coach-social
+              .coach-bio
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
+                mi mi tempor eros, sed efficitur lectus enim pellentesque lectus.
+            .four.columns
+              .coach-image-container
+                %img.coach-image{ src: "img/nic2.jpg" }
+              %p.coach-name
+                NICOLAS CAGE
+              .coach-social
+              .coach-bio
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
+                mi mi tempor eros, sed efficitur lectus enim pellentesque lectus.
+          %hr.section-hr
+      %section.section.organizers
+        .row
+          .section-title
+            ORGANIZACIÓN
+          .section-info
+            ¿De donde sale todo esto?
+          .row
+    %footer.section.footer
+      .row
+        .section-title
+          ¿QUÉ MÁS NECESITAS?
+        .section-info
+          Si has llegado hasta aquí déjate de tonterias y saca ya tus entradas, es tan fácil como decir... ¡GAME JAM!
+        .row

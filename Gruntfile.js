@@ -35,6 +35,13 @@ module.exports = function( grunt ) {
         src: "**",
         dest: "compiled/fonts",
         filter: "isFile"
+      },
+      images: {
+        expand: true,
+        cwd: "src/img/",
+        src: "**",
+        dest: "compiled/img",
+        filter: "isFile"
       }
     },
     watch: {
