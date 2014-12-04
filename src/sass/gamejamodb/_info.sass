@@ -1,23 +1,50 @@
 .info
   background-color: white
 
-.bubble-down
+.bubble-container
+  padding-bottom: 3em
+
+.bubble
   width: 100%
   position: relative
-  padding: 0em
-  background-color: #444
-  @include allbrow( border-radius, 10px )
+  padding: 1em
+  background-color: #999
   color: white
+  @include allbrow( border-radius, 50px )
+  @include arvo-regular( 0.9em )
+  &:after
+    content: ""
+    position: absolute
+    border-style: solid
+    border-color: #999 transparent
+    display: block
+    width: 0
+    z-index: 1
 
 .bubble-down:after
-  content: ''
-  position: absolute
-  border-style: solid
+  content: ""
   border-width: 15px 15px 0
-  border-color: #444 transparent
-  display: block
-  width: 0
-  z-index: 1
   margin-left: -15px
   bottom: -15px
   left: 25%
+
+.bubble-up:after
+  content: ""
+  border-width: 0px 15px 15px
+  margin-left: -15px
+  top: -15px
+  left: 25%
+
+.bubble-left:after
+  content: ""
+  border-width: 15px 15px 15px 0px
+  margin-left: -15px
+  left: -15px
+  top: 25%
+
+.bubble-right:after
+  content: ""
+  border-width: 15px 0 15px 15px
+  margin-left: -15px
+  right: -15px
+  top: 25%
