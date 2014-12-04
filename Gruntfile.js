@@ -28,6 +28,20 @@ module.exports = function( grunt ) {
         }]
       }
     },
+    coffee: {
+      compile: {
+        files: {
+          'compiled/js/application.js': "src/coffee/*.coffee"
+        }
+      }
+    },
+    uglify: {
+      min: {
+        files: {
+          "compiled/js/application.min.js": "compiled/js/application.js"
+        }
+      }
+    },
     copy: {
       fonts: {
         expand: true,
@@ -41,6 +55,13 @@ module.exports = function( grunt ) {
         cwd: "src/img/",
         src: "**",
         dest: "compiled/img",
+        filter: "isFile"
+      },
+      lib: {
+        expand: true,
+        cwd: "src/lib/",
+        src: "*",
+        dest: "compiled/js",
         filter: "isFile"
       }
     },
@@ -61,6 +82,8 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks( "grunt-contrib-compass" );
   grunt.loadNpmTasks( "grunt-haml2html" );
   grunt.loadNpmTasks( "grunt-exec");
+  grunt.loadNpmTasks( "grunt-contrib-coffee" );
+  grunt.loadNpmTasks( "grunt-contrib-uglify" );
 
-  grunt.registerTask( "default", [ "exec:removeCompiled", "haml", "compass", "cssmin", "copy", "watch"] );
+  grunt.registerTask( "default", [ "exec:removeCompiled", "haml", "compass", "cssmin", "coffee", "uglify:min", "copy", "watch"] );
 };

@@ -1,29 +1,31 @@
 %html
-  %link{ type: "text/css", rel: "stylesheet", media: "all", href: "css/application.min.css" }
   %head
     %meta{ content: "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
     %meta{ content: "width=device-width, initial-scale=1", name: "viewport" }
+    %link{ type: "text/css", rel: "stylesheet", media: "all", href: "css/application.min.css" }
+    %script{ type: "text/javascript", src: "js/jquery-2.0.2.min.js" }
+    %script{ type: "text/javascript", src: "js/application.min.js" }
     %title Game Jam ODB
   %body
     %header.section.navigation
       .row
         %span.navigation-item
-          %a.navigation-link{ title: "Info" }
+          %a.navigation-link{ title: "Info", "data-scroll" => "info" }
             INFO
         %span.navigation-item
-          %a.navigation-link{ title: "Programa" }
+          %a.navigation-link{ title: "Programa", "data-scroll" => "program" }
             PROGRAMA
         %span.navigation-item
-          %a.navigation-link{ title: "Entradas" }
+          %a.navigation-link{ title: "Entradas", "data-scroll" => "tickets" }
             ENTRADAS
         %span.navigation-item
-          %a.navigation-link{ title: "Coaches" }
+          %a.navigation-link{ title: "Coaches", "data-scroll" => "coaches" }
             COACHES
         %span.navigation-item
-          %a.navigation-link{ title: "Organización" }
+          %a.navigation-link{ title: "Organización", "data-scroll" => "organizers" }
             ORGANIZACIÓN
     %main
-      %section.section.presentation
+      %section.section.presentation#presentation
         .row
           .presentation-title
             GAME JAM ODB
@@ -39,7 +41,7 @@
               %img{ src: "img/nic1.jpg", alt: "Devs&Dungeons", title: "Devs&Dungeons" }
             %a.two.columns{ href: "http://www.cosfera.com", title: "coSfera", target: "_blank" }
               %img{ src: "img/nic1.jpg", alt: "coSfera", title: "coSfera" }
-      %section.section.info
+      %section#info.section.info
         .row
           .section-title
             ¿QUÉ ME ESTÁS CONTAINER?
@@ -52,7 +54,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum, mi
                   mi tempor eros, sed efficitur lectus enim pellentesque lectus.
               .row.bubble-container
-                .bubble.bubble-down
+                .bubble.bubble-right
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum, mi
                   mi tempor eros, sed efficitur lectus enim pellentesque lectus.
             .seven.columns.push_one
@@ -79,7 +81,14 @@
               sed congue posuere, ligula tortor aliquet enim, eu varius risus erat ac tortor. Ut facilisis scelerisque neque id placerat. Donec et nibh sed leo ultrices
               varius non a neque. Ut vel turpis ornare, pellentesque velit non, luctus eros.
           %hr.section-hr
-      %section.section.coaches
+      %section#tickets
+        .row
+          .section-title
+            ¡QUIERO PARTICIPAR!
+          .section-info
+            ¡Excelente decisión! Deja que te contemos que debes hacer...
+          %hr.section-hr
+      %section#coaches.section.coaches
         .row
           .section-title
             COACHES
@@ -114,13 +123,20 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
                 mi mi tempor eros, sed efficitur lectus enim pellentesque lectus.
           %hr.section-hr
-      %section.section.organizers
+      %section#organizers.section.organizers
         .row
           .section-title
             ORGANIZACIÓN
           .section-info
-            ¿De donde sale todo esto?
+            Pero... ¿de donde sale todo esto?
           .row
+            .six.columns
+            .six.columns
+              %img{ src: "img/nic1.jpg" }
+          .row
+            .six.columns
+            .six.columns
+              %img{ src: "img/nic1.jpg" }
     %footer.section.footer
       .row
         .section-title
@@ -128,3 +144,5 @@
         .section-info
           Si has llegado hasta aquí déjate de tonterias y saca ya tus entradas, es tan fácil como decir... ¡GAME JAM!
         .row
+          .button
+            ENTRADAS
