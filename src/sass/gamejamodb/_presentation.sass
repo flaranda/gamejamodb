@@ -1,22 +1,24 @@
 .presentation
   background-color: #222
-  color: white
 
   @include respond(all-phones)
     color: red !important
 
 .presentation-title
   @include montserrat-bold( $presentation-title )
+  color: white
   letter-spacing: 0.8em
   padding-top: 6em
   padding-bottom: 1em
 
 .presentation-info
   @include arvo-italic( $presentation-info )
+  color: white
   padding-bottom: 5em
 
 .presentation-organize
   @include montserrat-regular( $presentation-organize )
+  color: white
   padding-bottom: 2em
   letter-spacing: $letter-spacing-discrete
 
