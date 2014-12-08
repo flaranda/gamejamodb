@@ -1,5 +1,21 @@
 .coaches
-  padding-bottom: 2em
+  @include respond( desktop )
+    padding-bottom: 2em
+  @include respond( all-phones )
+    padding-bottom: 0em
+
+.coach
+  @include respond( desktop )
+    padding-left: 1em
+    padding-right: 1em
+  @include respond( all-phones )
+    padding-left: 0em
+    padding-right: 0em
+    padding-bottom: 2em !important
+
+.last-coach
+  @include respond( all-phones )
+    padding-bottom: 0em !important
 
 .coach-image-container
   text-align: center
@@ -7,19 +23,15 @@
   margin: 0 auto
 
 .coach-image
-  border: 10px solid pink
+  border: 10px solid $emerald
   @include allbrow( border-radius, 50% )
 
 .coach-name
-  @include montserrat-bold( $main-text )
+  @include montserrat-bold( $coach-name )
   padding-top: 1em
-
-.coach-social
 
 .coach-bio
   @include arvo-regular( $main-text )
   background-color: gray
-  margin-left: 1em
-  margin-right: 1em
   padding: 1em
   color: white

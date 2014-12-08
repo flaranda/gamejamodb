@@ -1,15 +1,18 @@
 .info
-  background-color: white
+  background-color: $salmon
 
 .bubble-container
   padding-bottom: 3em
 
+.bubble-image
+  padding-bottom: 1em
+
 .bubble
   width: 100%
   position: relative
-  padding: 1em
-  background-color: #999
-  color: white
+  padding: 2em
+  background-color: $bubble-white
+  color: $black
   @include allbrow( border-radius, 50px )
   @include arvo-regular( $main-text )
   &:after
@@ -23,23 +26,66 @@
 .bubble-down:after
   content: ""
   border-width: 25px 15px 0
-  border-color: #999 transparent
+  border-color: $bubble-white transparent
   margin-left: -15px
   bottom: -25px
   left: 30%
 
 .bubble-up:after
   content: ""
-  border-width: 0px 15px 25px
-  border-color: #999 transparent
-  margin-left: -15px
-  top: -25px
-  left: 40%
+  @include respond( desktop )
+    border-width: 0px 15px 25px
+    border-color: $bubble-white transparent
+    margin-left: -15px
+    top: -25px
+    left: 40%
+  @include respond( all-phones )
+    border-width: 25px 15px 0
+    border-color: $bubble-white transparent
+    margin-left: -15px
+    bottom: -25px
+    left: 30%
 
 .bubble-right:after
   content: ""
-  border-width: 15px 0 15px 25px
-  border-color: transparent #999
-  margin-top: -15px
-  right: -25px
-  top: 60%
+  @include respond( desktop )
+    border-width: 15px 0 15px 25px
+    border-color: transparent $bubble-white
+    margin-top: -15px
+    right: -25px
+    top: 60%
+  @include respond( all-phones )
+    border-width: 25px 15px 0
+    border-color: $bubble-white transparent
+    margin-left: -15px
+    bottom: -25px
+    left: 30%
+
+.bubble-title
+  @include montserrat-bold( $bubble-title )
+  letter-spacing: $letter-spacing-discrete
+  color: $salmon
+  padding-bottom: 0.5em
+
+.bubble-info
+  @include arvo-italic( $main-text )
+  text-align: left
+  color: $gray-text
+  padding-bottom: 1em
+  &:last-child
+    padding-bottom: 0em
+
+.bubble-info-big-dates
+  font-size: $main-text + 0.8em
+  text-align: center
+  display: block
+  padding-bottom: 0.2em
+
+.bubble-info-big-location
+  font-size: $main-text + 0.5em
+  text-align: center
+  display: block
+  padding-bottom: 0.2em
+
+.bubble-strong-text
+  color: $black

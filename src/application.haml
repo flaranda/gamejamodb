@@ -2,176 +2,527 @@
   %head
     %meta{ content: "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
     %meta{ content: "width=device-width, initial-scale=1", name: "viewport" }
+    %meta{ content: "Game Jam ODB", name: "title" }
+    %meta{ content: "", name: "keywords" }
+    %meta{ content: "", name: "description" }
     %link{ type: "text/css", rel: "stylesheet", media: "all", href: "css/application.min.css" }
     %script{ type: "text/javascript", src: "js/jquery-2.0.2.min.js" }
+    %script{ type: "text/javascript", src: "js/jquery-ui.min.js" }
     %script{ type: "text/javascript", src: "js/application.min.js" }
     %title Game Jam ODB
   %body
+
+
+    -# HEADER
+
     %header.section.navigation
-      .row
+      .row.navigation-accordion.show-on-phones.hide-on-desktop
+        .navigation-accordion-left
+          %img{ src: "img/logo-h.svg", alt: "Game Jam ODB" }
+        .navigation-accordion-right
+          %a{ "toggle-accordion" => ".navigation-menu" }
+            %img{ src: "img/menu.svg" }
+      .row.navigation-menu
         %span.navigation-item
           %a.navigation-link{ title: "Info", "data-scroll" => "info" }
             INFO
         %span.navigation-item
+          %a.navigation-link{ title: "Participa", "data-scroll" => "tickets" }
+            PARTICIPA
+        %span.navigation-item
           %a.navigation-link{ title: "Programa", "data-scroll" => "program" }
             PROGRAMA
-        %span.navigation-item
-          %a.navigation-link{ title: "Entradas", "data-scroll" => "tickets" }
-            ENTRADAS
         %span.navigation-item
           %a.navigation-link{ title: "Coaches", "data-scroll" => "coaches" }
             COACHES
         %span.navigation-item
           %a.navigation-link{ title: "Organización", "data-scroll" => "organizers" }
             ORGANIZACIÓN
+        %span.navigation-item
+          %a.navigation-link{ title: "FAQ", "data-scroll" => "faq" }
+            FAQ
+
+
+    -# PRESENTATION
+
     %main
       %section.section.presentation#presentation
         .row
-          .presentation-title
+          %h1.presentation-title
             GAME JAM ODB
+          .presentation-image
+            %img{ src: "img/logo.svg" }
           .presentation-info
-            %div
+            %p
               Primera Game Jam en Córdoba (España)
-            %div
+            %p
               23-25 Enero 2015
+          .presentation-tickets
+            .button
+              ENTRADAS
           .presentation-organize
             ORGANIZA
           .row.presentation-organizers
-            %a.two.columns.push_four{ href: "http://www.devsdungeons.com", title: "Devs&Dungeons", target: "_blank" }
-              %img{ src: "img/nic1.jpg", alt: "Devs&Dungeons", title: "Devs&Dungeons" }
-            %a.two.columns{ href: "http://www.cosfera.com", title: "coSfera", target: "_blank" }
-              %img{ src: "img/nic1.jpg", alt: "coSfera", title: "coSfera" }
+            %span.presentation-organizer
+              %img.presentation-organizer-image{ src: "img/dd-logo-negativo.svg", alt: "Devs&Dungeons organizador de Game Jam ODB" }
+            %span.presentation-organizer
+              %img.presentation-organizer-image{ src: "img/cosfera-logo-negativo.svg", alt: "coSfera organizador de Game Jam ODB" }
+
+
+      -# INFO SECTION
+
       %section#info.section.info
         .row
-          .section-title
+          %h2.section-title
             ¿QUÉ ME ESTÁS CONTAINER?
-          .section-info
+          %p.section-info
             Pues eso, como una hackaton pero de videojuegos y a nuestro rollo.
           .row
             .four.columns
               .row.bubble-container
                 .bubble.bubble-down
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum, mi
-                  mi tempor eros, sed efficitur lectus enim pellentesque lectus.
+                  %h3.bubble-title
+                    CUÁNDO
+                  %p.bubble-info
+                    %strong.bubble-info-big-dates.bubble-strong-text
+                      23, 24 y 25
+                    %strong.bubble-strong-text
+                      de ENERO
+                    de 2015. Desde las 17h del viernes hasta las 17h del domingo. ¡Un total de 48 horas!
               .row.bubble-container
                 .bubble.bubble-right
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum, mi
-                  mi tempor eros, sed efficitur lectus enim pellentesque lectus.
+                  %h3.bubble-title
+                    DÓNDE
+                  %p.bubble-info
+                    %strong.bubble-info-big-dates
+                      %a.main-text-link{ href: "http://www.cosfera.es/comollegar", title: "Cómo llegar a coSfera", target: "_blank" }
+                        coSfera
+                    %strong.bubble-info-big-location.bubble-strong-text
+                      Avda. Cervantes 6
+                    Coworking situado en el centro de la ciudad y cerca de las estaciones de tren y autobuses.
+                    (Córdoba, España)
             .seven.columns.push_one
               .row.bubble-container
                 .bubble.bubble-down
-                  %div
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum, mi
-                    mi tempor eros, sed efficitur lectus enim pellentesque lectus. Vivamus accumsan mi augue, a semper arcu viverra sit amet. Suspendisse ultrices, magna sed
-                    congue posuere, ligula tortor aliquet enim, eu varius risus erat ac tortor. Ut facilisis scelerisque neque id placerat. Donec et nibh sed leo ultrices varius
-                    non a neque. Ut vel turpis ornare, pellentesque velit non, luctus eros.
-                  %div
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
-                    mi mi tempor eros, sed efficitur lectus enim pellentesque lectus. Vivamus accumsan mi augue, a semper arcu viverra sit amet. Suspendisse ultrices, magna
-                    sed congue posuere, ligula tortor aliquet enim, eu varius risus erat ac tortor. Ut facilisis scelerisque neque id placerat. Donec et nibh sed leo ultrices
-                    varius non a neque. Ut vel turpis ornare, pellentesque velit non, luctus eros.
+                  %h3.bubble-title
+                    QUÉ ES GAME JAM ODB
+                  %p.bubble-info
+                    Juntar
+                    %strong.bubble-strong-text
+                      apasionad@s
+                    del mundillo con el objetivo de
+                    %strong.bubble-strong-text
+                      crear videojuegos con una temática común en 48 horas.
+                    Se trata de un evento no competitivo dirigido a aficionad@s y profesionales del desarrollo de videojuegos,
+                    en el que podrás poner a prueba tus habilidades, aprender de los demás, y sobre todo, divertirte.
+                  .bubble-image
+                    %img{ src: "img/gamejam.svg" }
+                  %p.bubble-info
+                    Los participantes pueden ser
+                    %strong.bubble-strong-text
+                      programadores, grafistas, o compositores.
+                    Contaremos con un grupo de
+                    %strong.bubble-strong-text
+                      coaches
+                    que estarán a vuestra disposición para resolver todas las dudas que os surjan durante el proceso de desarrollo.
+                  %p.bubble-info
+                    Los coaches actuarán también de jurado y entregarán premios simbólicos a modo de reconocimiento al MEJOR JUEGO, MEJOR CONCEPTO,
+                    MEJORES GRÁFICOS, MEJOR SONIDO, y la MENCIÓN ESPECIAL DEL PÚBLICO.
           .row
             .bubble.bubble-up
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
-              mi mi tempor eros, sed efficitur lectus enim pellentesque lectus. Vivamus accumsan mi augue, a semper arcu viverra sit amet. Suspendisse ultrices, magna
-              sed congue posuere, ligula tortor aliquet enim, eu varius risus erat ac tortor. Ut facilisis scelerisque neque id placerat. Donec et nibh sed leo ultrices
-              varius non a neque. Ut vel turpis ornare, pellentesque velit non, luctus eros.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
-              mi mi tempor eros, sed efficitur lectus enim pellentesque lectus. Vivamus accumsan mi augue, a semper arcu viverra sit amet. Suspendisse ultrices, magna
-              sed congue posuere, ligula tortor aliquet enim, eu varius risus erat ac tortor. Ut facilisis scelerisque neque id placerat. Donec et nibh sed leo ultrices
-              varius non a neque. Ut vel turpis ornare, pellentesque velit non, luctus eros.
-          %hr.section-hr
-      %section#tickets
+              %h3.bubble-title
+                COMPIS DE GLOBAL GAME JAM
+              .row
+                .six.columns
+                  %p.bubble-info
+                    %strong.bubble-strong-text
+                      Game Jam ODB forma parte de
+                      %a.main-text-link{ href: "http://www.globalgamejam.com", title: "Página de Global Game Jam", target: "_blank" }
+                        Global Game Jam
+                      ,
+                    un evento internacional celebrado los días 23, 24 y 25 de enero que reune una cantidad
+                    ingente de
+                    %strong.bubble-strong-text
+                      participantes de todo el mundo.
+                    Esto quiere decir que al mismo tiempo que desarrollas
+                    tu videojuego, ¡miles de personas repartidas por el planeta estarán haciendo lo mismo!
+                .six.columns
+                  %p.bubble-info
+                    Y lo que es mejor, podrás subir tu videojuego
+                    a la página oficial de Global Game Jam para que todo el mundo pueda probarlo.
+                    Ellos se encargan de proponer el tema en torno al cual deberemos trabajar.
+          %hr.invisible-section-hr
+
+
+      -# TICKETS SECTIONS
+
+      %section#tickets.section
         .row
-          .section-title
+          %h2.section-title.neutral-section-title
             ¡QUIERO PARTICIPAR!
-          .section-info
+          %p.section-info.neutral-section-info
             ¡Excelente decisión! Deja que te contemos qué debes hacer...
-          %hr.section-hr
+          %div
+            .row.tickets-row
+              .four.columns.tickets-container
+                .tickets-step-index
+                  1
+                .tickets-step-title
+                  ELIGE TU ROL
+                %p.tickets-step-info
+                  Programador, grafista o compositor. Según tus habilidades tendrás que decirnos
+                  con qué rol vas a participar para hacer los grupos de forma equilibrada.
+              .eight.columns.tickets-roles.tickets-container
+                %img{ src: "img/roles.svg" }
+            .row.tickets-row
+              .four.columns.early-bird.show-on-desktop.hide-on-phones.tickets-container
+                %img.early-bird-image{ src: "img/earlybird.svg" }
+                .button
+                  ENTRADAS
+              .four.columns.tickets-container.tickets-container
+                .tickets-step-index
+                  2
+                .tickets-step-title
+                  RESERVA
+                %p.tickets-step-info
+                  %a.main-text-link{ href: "#", title: "Reserva tus entradas en Eventbrite.", target: "_blank" }
+                    Reserva
+                  tus entradas a través de la plataforma de Eventbrite que hemos habilitado. Ahora mismo tenemos entradas Earlybird
+                  pero el mes que viene quién sabe, ¡date prisa!
+              .four.columns.early-bird.show-on-phones.hide-on-desktop.tickets-container
+                %img.early-bird-image{ src: "img/earlybird.svg" }
+                .button
+                  ENTRADAS
+              .four.columns.tickets-container
+                .tickets-step-index
+                  3
+                .tickets-step-title
+                  REGÍSTRATE
+                %p.tickets-step-info
+                  %a.main-text-link{ href: "#", title: "Regístrate en la página de Global Game Jam.", target: "_blank" }
+                    Regístrate
+                  en la página de Global Game Jam. Tienes hasta el mismo día de la jam para hacerlo, pero es
+                  indispensable para poder participar a nivel global y subir tu juego.
+          %hr.invisible-section-hr
+
+
+      -# PROGRAM SECTION
+
+      %section#program.section.program
+        .row
+          %h2.section-title
+            PROGRAMA
+          %p.section-info.program-section-info
+            Cómo será este estupendo fin de semana, paso a paso.
+          .row.program-container
+            .seven.columns.program-schedule
+              %h3.program-schedule-title
+                HORARIO
+              .program-schedule-info
+                %p
+                  Este horario es provisional, según vayamos confirmando comidas patrocinadas y charlas de los coaches se irán
+                  realizando algunos cambios.
+                %div
+                  .program-schedule-day
+                    VIERNES 23 ENERO
+                  %hr
+                  %ul.program-schedule-list
+                    %li
+                      %span.program-schedule-list-hour
+                        16:00 -
+                      Check in.
+                    %li
+                      %span.program-schedule-list-hour
+                        17:00 -
+                      Presentación, normas, y formación de equipos.
+                    %li
+                      %span.program-schedule-list-hour
+                        18:00 -
+                      Anuncio del tema e inicio de Game Jam ODB.
+                    %li
+                      %span.program-schedule-list-hour
+                        DESARROLLO A TOPE.
+                    %li
+                      %span.program-schedule-list-hour
+                        02:00 -
+                      Cierre de coSfera.
+                %div
+                  .program-schedule-day
+                    SÁBADO 24 ENERO
+                  %hr
+                  %ul.program-schedule-list
+                    %li
+                      %span.program-schedule-list-hour
+                        09:00 -
+                      Apertura de coSfera y desayuno patrocinado.
+                    %li
+                      %span.program-schedule-list-hour
+                        DESARROLLO A TOPE.
+                    %li
+                      %span.program-schedule-list-hour
+                        02:00 -
+                      Cierre de coSfera.
+                %div
+                  .program-schedule-day
+                    DOMINGO 25 ENERO
+                  %hr
+                  %ul.program-schedule-list
+                    %li
+                      %span.program-schedule-list-hour
+                        09:00 -
+                      Apertura de coSfera y desayuno patrocinado.
+                    %li
+                      %span.program-schedule-list-hour
+                        ÚLTIMA ETAPA DE DESARROLLO.
+                    %li
+                      %span.program-schedule-list-hour
+                        17:00 -
+                      Subida de juegos a la página de Global Game Jam.
+                    %li
+                      %span.program-schedule-list-hour
+                        17:00 a 19:00 -
+                      Momento de relax para probar los juegos.
+                    %li
+                      %span.program-schedule-list-hour
+                        19:00 -
+                      Entrega de premios.
+                    %li
+                      %span.program-schedule-list-hour
+                        20:00 -
+                      Fin de Game Jam ODB.
+            .five.columns
+              .program-details
+                %h3.program-details-title
+                  QUÉ TRAER
+                .program-details-container
+                  %img{ src: "img/ticket.svg" }
+                  %p.program-details-info-big
+                    %strong
+                      Entrada de Eventbrite
+                .program-details-container
+                  %img{ src: "img/computer.svg" }
+                  %p.program-details-info-big
+                    %strong
+                      Equipo y herramientas de trabajo
+                .program-details-container
+                  %img{ src: "img/headphones.svg" }
+                  %p.program-details-info-big
+                    %strong
+                      Auriculares
+                  %p.program-details-info
+                    (para no molestar al resto de participantes)
+              .program-details
+                %h3.program-details-title
+                  COMIDA
+                %p.program-details-info
+                  Con tu entrada tienes
+                  %strong
+                    incluidos los desayunos.
+                  Y no solo eso, estamos buscando patrocinio para todas las comidas y cenas. ¡Estad atentos!
+              .program-details
+                %h3.program-details-title
+                  DORMIR
+                %p.program-details-info
+                  ¿Vienes de fuera? Estamos buscando convenios que nos ofrezcan precios especiales con alojamientos cercanos.
+                  %a.main-text-link{ href: "mailto:devsdungeons@gmail.com", title: "Escríbenos y te ayudaremos a buscar alojamiento." }
+                    Escríbenos
+                  y te echaremos una mano.
+          %hr.invisible-section-hr
+
+
+      -# COACHES SECTION
+
       %section#coaches.section
         .row
-          .section-title
+          %h2.section-title.neutral-section-title
             COACHES
-          .section-info
-            Diferentes profesionales del sector te iluminarán con su sabiduria.
+          %p.section-info.neutral-section-info
+            Durante el fin de semana diferentes figuras del sector pulularán a tu alrededor para poder iluminarte con su sabiduría en caso de atasco.
+            También será el grupo encargado de hacer de jurado al final del evento.
           .row.coaches
-            .four.columns
+            .four.columns.coach
               .coach-image-container
-                %img.coach-image{ src: "img/nic2.jpg" }
-              %p.coach-name
-                NICOLAS CAGE
-              .coach-social
-              .coach-bio
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
-                mi mi tempor eros, sed efficitur lectus enim pellentesque lectus.
-            .four.columns
+                %img.coach-image{ src: "img/coach-programmer.svg" }
+              .coach-name
+                UNKNOWN
+              .social-links
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+              -#.coach-bio
+            .four.columns.coach
               .coach-image-container
-                %img.coach-image{ src: "img/nic2.jpg" }
-              %p.coach-name
-                NICOLAS CAGE
-              .coach-social
-              .coach-bio
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
-                mi mi tempor eros, sed efficitur lectus enim pellentesque lectus.
-            .four.columns
+                %img.coach-image{ src: "img/coach-artist.svg" }
+              .coach-name
+                UNKNOWN
+              .social-links
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+              -#.coach-bio
+            .four.columns.coach
               .coach-image-container
-                %img.coach-image{ src: "img/nic2.jpg" }
-              %p.coach-name
-                NICOLAS CAGE
-              .coach-social
-              .coach-bio
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
-                mi mi tempor eros, sed efficitur lectus enim pellentesque lectus.
+                %img.coach-image{ src: "img/coach-composer.svg" }
+              .coach-name
+                UNKNOWN
+              .social-links
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+              -#.coach-bio
           .row
-            .four.columns.push_two
+            .four.columns.push_two.coach
               .coach-image-container
-                %img.coach-image{ src: "img/nic2.jpg" }
-              %p.coach-name
-                NICOLAS CAGE
-              .coach-social
-              .coach-bio
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
-                mi mi tempor eros, sed efficitur lectus enim pellentesque lectus.
-            .four.columns
+                %img.coach-image{ src: "img/coach-artist.svg" }
+              .coach-name
+                UNKNOWN
+              .social-links
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+              -#.coach-bio
+            .four.columns.coach.last-coach
               .coach-image-container
-                %img.coach-image{ src: "img/nic2.jpg" }
-              %p.coach-name
-                NICOLAS CAGE
-              .coach-social
-              .coach-bio
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
-                mi mi tempor eros, sed efficitur lectus enim pellentesque lectus.
-          %hr.section-hr
-      %section#organizers.section.organizers
+                %img.coach-image{ src: "img/coach-programmer.svg" }
+              .coach-name
+                UNKNOWN
+              .social-links
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+                %a.social-link
+                  %img.social-link-image{ src: "img/social-unknown.svg" }
+              -#.coach-bio
+          %hr.invisible-section-hr
+
+
+      -# TWITTER SECTION
+      %section.section.twitter
         .row
           .section-title
+            %a{ href: "http://www.twitter.com/gamejamodb", title: "Twitter de Game Jam ODB", target: "_blank" }
+              %img{ src: "img/twitter.svg", alt: "Twitter de Game Jam ODB" }
+          .twitter-user
+            %a{ href: "http://www.twitter.com/gamejamodb", title: "Twitter de Game Jam ODB", target: "_blank" }
+              @gamejamODB
+          .row
+            .five.columns.centered
+              %p.twitter-info
+                Usa el hashtag local
+                %strong
+                  %a{ href: "https://twitter.com/hashtag/gamejamODB", title: "Utiliza el hashtag gamejamODB", target: "_blank" }
+                    = "#gamejamODB"
+                y el global
+                %strong
+                  %a{ href: "https://twitter.com/hashtag/GGJ15", title: "Utiliza el hashtag GGJ15", target: "_blank" }
+                    = "#GGJ15"
+                tu ayuda para difundir el evento es muy importante.
+          .row
+            %h2.section-title.twitter-title
+              ¿DE VERAS NO TE HEMOS CONVENCIDO YA?
+            .button
+              ENTRADAS
+          %hr.invisible-section-hr
+
+
+      -# ORGANIZERS SECTION
+
+      %section#organizers.section
+        .row
+          %h2.section-title.neutral-section-title
             ORGANIZACIÓN
-          .section-info
+          %p.section-info.neutral-section-info
             Pero... ¿de donde sale todo esto?
-          .row.organizer-container
-            .six.columns
-              .organizer-logo
-                %img{ src: "img/nic1.jpg" }
-              .organizer-info
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
-                mi mi tempor eros, sed efficitur lectus enim pellentesque lectus.
-            .six.columns
-              %img.organizer-image{ src: "img/nic1.jpg" }
-          .row.organizer-container
-            .six.columns
-              .organizer-logo
-                %img{ src: "img/nic1.jpg" }
-              .organizer-info
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sem ut diam aliquet iaculis. Suspendisse ornare, urna vitae elementum elementum,
-                mi mi tempor eros, sed efficitur lectus enim pellentesque lectus.
-            .six.columns
-              %img.organizer-image{ src: "img/nic1.jpg" }
+          .row
+            .six.columns.organizer-container
+              %img{ src: "img/dd-logo.svg", alt: "Devs&Dungeons organizador de Game Jam ODB" }
+              .social-links
+                %a.social-link{ href: "http://www.devsdungeons.com", title: "Web de Devs&Dungeons", target: "_blank" }
+                  %img.social-link-image{ src: "img/social-web.svg" }
+                %a.social-link{ href: "mailto:devsdungeons@gmail.com", title: "Correo de Devs&Dungeons" }
+                  %img.social-link-image{ src: "img/social-mail.svg", alt: "Mail de Devs&Dungeons" }
+                %a.social-link{ href: "http://www.facebook.com/DevsDungeons", title: "Devs&Dungeons en Facebook", target: "_blank" }
+                  %img.social-link-image{ src: "img/social-fb.svg", alt: "Facebook de Devs&Dungeons" }
+                %a.social-link{ href: "http://www.twitter.com/DevsDungeons", title: "Devs&Dungeons en Twitter", target: "_blank" }
+                  %img.social-link-image{ src: "img/social-tw.svg", alt: "Twitter de Devs&Dungeons" }
+              .organizer-bio
+                %p
+                  Devs&Dungeons es una
+                  %strong.organizer-bio-strong
+                    comunidad de desarrolladores
+                  de videojuegos que nace de la necesidad de
+                  %strong.organizer-bio-strong
+                    fomentar la industria local.
+                  Nuestro objetivo es
+                  %strong.organizer-bio-strong
+                    incentivar
+                  a la gente a crear sus propios desarrollos y hacerles perder el miedo a introducirse a este medio, para ello realizamos
+                  %strong.organizer-bio-strong
+                    charlas, talleres y quedadas
+                  con el fin de compartir inquietudes,
+                  %strong.organizer-bio-strong
+                    formar sinergias y conocer a otros desarrolladores.
+            .six.columns.organizer-container
+              %img{ src: "img/cosfera-logo.svg", alt: "coSfera organizador de Game Jam ODB" }
+              .social-links
+                %a.social-link{ href: "http://www.cosfera.es", title: "Web de coSfera", target: "_blank" }
+                  %img.social-link-image{ src: "img/social-web.svg", alt: "Web de coSfera" }
+                %a.social-link{ href: "mailto:hola@cosfera.es", title: "Correo de coSfera" }
+                  %img.social-link-image{ src: "img/social-mail.svg", alt: "Mail de coSfera" }
+                %a.social-link{ href: "http://www.facebook.com/coSfera", title: "coSfera en Facebook", target: "_blank" }
+                  %img.social-link-image{ src: "img/social-fb.svg", alt: "Facebook de coSfera" }
+                %a.social-link{ href: "http://www.twitter.com/coSfera", title: "coSfera en Twitter", target: "_blank" }
+                  %img.social-link-image{ src: "img/social-tw.svg", alt: "Twitter de coSfera" }
+              .organizer-bio
+                %p
+                  Somos una comunidad de gente que podría trabajar desde cualquier sitio, pero que prefiere desarrollar su trabajo acompañada y
+                  de una forma más productiva en coSfera.
+                  Porque coSfera es una plataforma para la comunidad de profesionales independientes y emprendedores locales enfocados en la
+                  innovación tecnológica y social donde conectar, inspirar y transformar.
+          %hr.invisible-section-hr
+
+
+      -# FAQ SECTION
+
+      %section#faq.section.faq
+        .row
+          %h2.section-title
+            FAQ
+          %p.section-info
+            ¿Tienes alguna duda? Vamos a intentar resolverla...
+          .row
+            .six.columns.faq-column
+              .faq-container
+                adasd
+            .six.columns.faq-column
+              .faq-container
+                asdasd
+          %hr.invisible-section-hr
+
+    -# FOOTER
+
     %footer.section.footer
       .row
-        .section-title
-          ¿QUÉ MÁS NECESITAS?
-        .section-info
-          Si has llegado hasta aquí déjate de tonterias y saca ya tus entradas, es tan fácil como decir... ¡GAME JAM!
-        .row
-          .button
-            ENTRADAS

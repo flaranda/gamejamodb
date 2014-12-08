@@ -1,4 +1,16 @@
 /*---COLORS-----------------------------------------------------------*/
+$salmon: #F47C64;
+$emerald: #56CC91;
+$green: #56A880;
+$red: #AF3114;
+$blood: #932B2B;
+$gray: #B3B3B3;
+$black: #3C3C3B;
+$header-black: #1A1A1A;
+$white: white;
+$bubble-white: #F2F2F2;
+$wine: #7F2040;
+$gray-text: #666666;
 
 /*---MIXINGS----------------------------------------------------------*/
 @mixin allbrow( $property, $value... ) {
@@ -14,11 +26,13 @@
 @mixin montserrat-regular( $size ) {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+  font-style: normal;
   font-size: $size;
 }
 @mixin montserrat-bold( $size ) {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+  font-style: normal;
   font-size: $size;
 }
 
@@ -26,6 +40,7 @@
 @mixin arvo-regular( $size ) {
   font-family: 'Arvo', serif;
   font-weight: 400;
+  font-style: normal;
   font-size: $size;
 }
 @mixin arvo-italic( $size ) {
@@ -36,14 +51,22 @@
 }
 
 /*---FONT SIZES-------------------------------------------------------*/
-$navigation-item: 0.85em;
+$navigation-item: 0.7em;
+$navigation-item-letter-spacing: 0.2em;
+
 $presentation-title: 2em;
-$presentation-info: 1.2em;
-$presentation-organize: 0.85em;
+$presentation-info: 1em;
+$presentation-organize: 0.7em;
 
 $section-title: 1.2em;
 $section-info: 1em;
-
 $letter-spacing-discrete: 0.15em;
 
-$main-text: 0.9em;
+$bubble-title: 1.8em;
+
+$program-title: 1.5em;
+$program-schedule-day: 1.2em;
+
+$coach-name: 1.2em;
+
+$main-text: 0.95em;

@@ -1,0 +1,53 @@
+.tickets-row
+  @include respond( desktop )
+    &:first-child
+      padding-bottom: 4em
+
+.tickets-container
+  @include respond( all-phones )
+    padding-left: 1em !important
+    padding-right: 1em !important
+
+.tickets-step-index
+  @include montserrat-bold( 1.2em )
+  @include allbrow( border-radius, 50% )
+  width: 2em
+  height: 2em
+  line-height: 2em
+  text-align: center
+  margin: 0 auto
+  background-color: $red
+  color: white
+
+.tickets-step-title
+  @include montserrat-bold( $section-title )
+  text-align: center
+  color: $black
+  letter-spacing: $letter-spacing-discrete
+  padding-top: 1em
+  padding-bottom: 1em
+
+.tickets-step-info
+  @include arvo-italic( $main-text )
+  text-align: center
+  color: $gray-text
+  @include respond( all-phones )
+    text-align: center
+
+.early-bird
+  text-align: center
+  @include respond( all-phones )
+    padding-bottom: 4em !important
+
+.early-bird-image
+  padding-bottom: 1.5em !important
+  @include respond( all-phones )
+    padding-top: 1em !important
+
+.tickets-roles
+  @include respond( desktop )
+    text-align: right
+  @include respond( all-phones )
+    text-align: center
+    padding-top: 1em !important
+    padding-bottom: 4em !important

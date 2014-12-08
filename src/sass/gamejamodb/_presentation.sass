@@ -1,26 +1,57 @@
 .presentation
-  background-color: #222
-
+  background-image: url( "../img/bg.svg" )
+  background-position: center
+  @include respond(desktop)
+    background-size: 3100px
   @include respond(all-phones)
-    color: red !important
+    background-size: 1700px auto
+    background-position-y: 1em
+
+.presentation-image
+  padding-top: 8.5em
+  padding-bottom: 1em
+  @include respond(all-phones)
+    display: none
 
 .presentation-title
-  @include montserrat-bold( $presentation-title )
-  color: white
-  letter-spacing: 0.8em
-  padding-top: 6em
-  padding-bottom: 1em
+  position: 0 -1000px
 
 .presentation-info
   @include arvo-italic( $presentation-info )
-  color: white
-  padding-bottom: 5em
+  color: $white
+  @include respond(desktop)
+    padding-bottom: 2em
+  @include respond(all-phones)
+    padding-top: 6em
+    padding-bottom: 2em
+
+.presentation-tickets
+  @include respond( desktop )
+    padding-bottom: 4em
+  @include respond( all-phones )
+    padding-bottom: 2em
 
 .presentation-organize
   @include montserrat-regular( $presentation-organize )
-  color: white
-  padding-bottom: 2em
   letter-spacing: $letter-spacing-discrete
+  color: $white
+  @include respond(desktop)
+    padding-bottom: 2em
+  @include respond(all-phones)
+    padding-bottom: 1em
 
 .presentation-organizers
-  padding-bottom: 3em
+  @include respond(desktop)
+    padding-bottom: 3.5em
+  @include respond(all-phones)
+    padding-bottom: 1em
+
+.presentation-organizer
+  &:first-child
+    padding-right: 2em
+
+.presentation-organizer-image
+  @include respond(desktop)
+    width: 8em
+  @include respond(all-phones)
+    width: 5em

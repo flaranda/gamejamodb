@@ -1,0 +1,69 @@
+.program
+  background-color: $blood
+
+.program-container
+  @include respond( all-phones )
+    padding-left: 1em !important
+    padding-right: 1em !important
+
+.program-section-info
+  color: $salmon
+
+.program-schedule
+  padding: 2em
+  text-align: left
+
+.program-schedule-title
+  @include montserrat-bold( $program-title )
+  color: $white
+  text-align: center
+  padding-bottom: 1em
+
+.program-schedule-info
+  @include arvo-italic( $main-text )
+  text-align: left
+  color: white
+
+.program-schedule-day
+  @include montserrat-bold( $program-schedule-day )
+  padding-top: 2em
+
+.program-schedule-list
+  @include montserrat-regular( $main-text )
+  list-style-type: disc
+  list-style-position: outside
+  padding-left: 2em
+
+.program-schedule-list-hour
+  @include montserrat-bold( $main-text + 0.15em )
+
+.program-details
+  background-color: $salmon
+  padding: 1.5em
+  margin-bottom: 2em
+  &:last-child
+    margin-bottom: 0em
+  @include respond( all-phones )
+    &:first-child
+      margin-top: 2em
+
+.program-details-container
+  padding-bottom: 1.2em
+  &:last-child
+    padding-bottom: 0em
+
+.program-details-title
+  @include montserrat-bold( $program-title )
+  color: white
+  padding-bottom: 1em
+
+.program-details-info
+  @include arvo-italic( $main-text )
+  text-align: center
+  color: white
+
+.program-details-info-big
+  @include arvo-italic( $main-text )
+  text-align: center
+  color: white
+  padding-top: 0.5em

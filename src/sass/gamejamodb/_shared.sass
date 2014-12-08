@@ -1,21 +1,59 @@
+p, h1, h2, h3, h4, h5, h6
+  font-family: inherit
+  margin: 0
+  color: inherit
+  font-size: inherit
+  font-weight: inherit
+  line-height: inherit
+  text-align: inherit
+
+a
+  cursor: pointer
+  color: inherit
+
+.row
+  max-width: 960px
+
+.hide-on-phones
+  @include hidden( all-phones )
+
+.show-on-phones
+  @include visible( all-phones )
+
+.hide-on-desktop
+  @include hidden( desktop )
+
+.show-on-desktop
+  @include visible( desktop )
+
 .section
   text-align: center
-  padding-left: 2em
-  padding-right: 2em
+  @include respond( desktop )
+    padding-left: 2em
+    padding-right: 2em
+  @include respond( all-phones )
+    padding-left: 0em
+    padding-right: 0em
 
 .section-title
-  @include montserrat-regular( $section-title )
+  @include montserrat-bold( $section-title )
   text-align: center
   padding-top: 2.5em
   letter-spacing: 0.3em
-  color: black
+  color: white
+
+.neutral-section-title
+  color: $black
 
 .section-info
   @include arvo-italic( $section-info )
   text-align: center
-  color: gray
+  color: $red
   padding-top: 1em
   padding-bottom: 3em
+
+.neutral-section-info
+  color: $gray
 
 .section-hr
   border-color: gray
@@ -23,13 +61,37 @@
   margin: 0 auto
   margin-top: 4em
 
+.invisible-section-hr
+  border-color: transparent
+  margin: 0 auto
+  margin-top: 4em
+  width: 70%
+
 .button
   @include allbrow( border-radius, 0.5em )
   @include montserrat-regular( $main-text )
   letter-spacing: 0.3em
   color: white
-  background-color: rgb( 232, 30, 92 ) 
-  padding: 1em 3.5em 1em 3.5em
+  background-color: $salmon
+  padding: 0.8em 3.5em
   cursor: pointer
   text-align: center
   display: inline-block
+
+.social-links
+  padding-top: 1em
+  padding-bottom: 1em
+  text-align: center
+
+.social-link
+  padding-right: 0.5em
+  &:last-child
+    padding-right: 0
+
+.social-link-image
+  width: 2em
+
+.main-text-link
+  color: $emerald
+  &:hover
+    color: $green
