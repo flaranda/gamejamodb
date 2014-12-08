@@ -9,3 +9,24 @@
 
 .faq-container
   background-color: white
+  @include allbrow( border-radius, 25px )
+  padding: 2em
+  text-align: left
+
+.right-faq-container
+  @include respond( all-phones )
+    margin-top: -4em
+
+.faq-list
+  list-style-type: disc
+  list-style-position: outside
+  padding-left: 1em
+
+.faq-list-question
+  @include montserrat-bold( $main-text )
+  color: $black
+
+.faq-list-response
+  @include arvo-italic( $main-text )
+  color: $black
+  padding-bottom: 2em

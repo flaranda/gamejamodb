@@ -6,6 +6,7 @@
     %meta{ content: "", name: "keywords" }
     %meta{ content: "", name: "description" }
     %link{ type: "text/css", rel: "stylesheet", media: "all", href: "css/application.min.css" }
+    %link{ rel: "shortcut icon", href: "img/favicon.ico" }
     %script{ type: "text/javascript", src: "js/jquery-2.0.2.min.js" }
     %script{ type: "text/javascript", src: "js/jquery-ui.min.js" }
     %script{ type: "text/javascript", src: "js/application.min.js" }
@@ -58,7 +59,7 @@
             %p
               23-25 Enero 2015
           .presentation-tickets
-            .button
+            %a.button{ href: "#", title: "Reserva tus entradas en Eventbrite.", target: "_blank" }
               ENTRADAS
           .presentation-organize
             ORGANIZA
@@ -95,7 +96,7 @@
                     DÓNDE
                   %p.bubble-info
                     %strong.bubble-info-big-dates
-                      %a.main-text-link{ href: "http://www.cosfera.es/comollegar", title: "Cómo llegar a coSfera", target: "_blank" }
+                      %a.main-text-link{ href: "https://www.google.com/maps?ll=37.887577,-4.784364&z=15&t=m&hl=es-ES&gl=US&mapclient=embed&cid=13360638128305817413", title: "Cómo llegar a coSfera", target: "_blank" }
                         coSfera
                     %strong.bubble-info-big-location.bubble-strong-text
                       Avda. Cervantes 6
@@ -177,7 +178,7 @@
             .row.tickets-row
               .four.columns.early-bird.show-on-desktop.hide-on-phones.tickets-container
                 %img.early-bird-image{ src: "img/earlybird.svg" }
-                .button
+                %a.button{ href: "", title: "Reserva tus entradas en Eventbrite.", target: "_blank" }
                   ENTRADAS
               .four.columns.tickets-container.tickets-container
                 .tickets-step-index
@@ -443,7 +444,7 @@
           .row
             %h2.section-title.twitter-title
               ¿DE VERAS NO TE HEMOS CONVENCIDO YA?
-            .button
+            %a.button{ href: "#", title: "Reserva tus entradas en Eventbrite.", target: "_blank" }
               ENTRADAS
           %hr.invisible-section-hr
 
@@ -516,13 +517,140 @@
           .row
             .six.columns.faq-column
               .faq-container
-                adasd
+                %ul.faq-list
+                  %li.faq-list-question
+                    ¿Qué nivel debo tener para participar?
+                  %p.faq-list-response
+                    No hay limitaciones en este sentido, mientras puedas elegir un rol (programador, grafista o compositor) te
+                    animamos a que lo intentes :)
+                  %li.faq-list-question
+                    ¿Qué herramientas de trabajo puedo llevar?
+                  %p.faq-list-response
+                    Todo el que necesites y seas capaz de transportar: portatil, sobremesa, teclado, tableta gráfica...
+                  %li.faq-list-question
+                    ¿Qué framework de desarrollo de videojuegos puedo utilizar?
+                  %p.faq-list-response
+                    El que tú sepas utilizar, si eres programador recuerda especificar cuál al comprar tu entrada para que podamos colocarte con
+                    compañeros que usen el mismo framework.
+                  %li.faq-list-question
+                    ¿Puedo utilizar assets gráficos y de sonido de fuentes externa?
+                  %p.faq-list-response
+                    Sí. La idea es que tu equipo sea autosuficiente y no los necesitéis. En el caso de usarlos, tu equipo no podrá optar a los
+                    premios de la categoría correspondiente a esos assets.
+                  %li.faq-list-question
+                    ¿Puedo traer material ya hecho?
+                  %p.faq-list-response
+                    No te lo vamos a impedir, pero esa no es la filosofía de una Game Jam. La idea es que pruebes a desarrollar tu juego desde 0 en 48h.
+                  %li.faq-list-question
+                    ¿Puedo traer mi propio equipo formado?
+                  %p.faq-list-response
+                    No, los equipos los forma la organización teniendo en cuenta las habilidades de la gente para hacer un reparto equitativo
+                    de los recursos humanos. ¡Conocer gente nueva forma parte de la experiencia!
+                  %li.faq-list-question
+                    ¿Habrá premios?
+                  %p.faq-list-response
+                    Sí, habrá una entrega de premios el domingo por la tarde para reconocer simbólicamente el MEJOR JUEGO, MEJOR CONCEPTO,
+                    MEJORES GRÁFICOS, MEJOR SONIDO, y la MENCIÓN ESPECIAL DEL PÚBLICO. Recordamos que el evento no es competitivo y que
+                    la finalidad es aprender y pasarlo bien.
             .six.columns.faq-column
-              .faq-container
-                asdasd
+              .faq-container.right-faq-container
+                %ul.faq-list
+                  %li.faq-list-question
+                    ¿Qué es un coach?
+                  %p.faq-list-response
+                    Los
+                    %a.main-text-link{ "data-scroll" => "coaches" }
+                      coaches
+                    son profesionales del séctor de los videojuegos que te acompañarán durante el fin de semana para ayudarte
+                    a resolver atascos de diferente índole en el proceso de desarrollo. También ejercerán de jurado de cara a los premios.
+                    Aprovecha para preguntarles lo que quieras y hablar con ellos, es una gran oportunidad poder contar con ellos y obtener
+                    información del séctor de primera mano.
+                  %li.faq-list-question
+                    ¿Cómo se llega a coSfera?
+                  %p.faq-list-response
+                    La dirección es
+                    %a.main-text-link{ href: "https://www.google.com/maps?ll=37.887577,-4.784364&z=15&t=m&hl=es-ES&gl=US&mapclient=embed&cid=13360638128305817413", title: "Cómo llegar a coSfera", target: "_blank" }
+                      Avda. Cervantes 6 (Córdoba, España).
+                    El local se encuentra dentro de una zona de vecinos.
+                  %li.faq-list-question
+                    ¿Se puede estacionar en las inmediaciones del lugar para descargar equipo?
+                  %p.faq-list-response
+                    Para aparcar hay que pagar parquímetro dentro del horario establecido, no nos responsabilizamos de los estacionamientos
+                    en doble fila ;) De todos modos te invitamos a echar un vistazo al
+                    %a.main-text-link{ href: "https://www.google.com/maps?ll=37.887577,-4.784364&z=15&t=m&hl=es-ES&gl=US&mapclient=embed&cid=13360638128305817413", title: "Cómo llegar a coSfera", target: "_blank" }
+                      mapa
+                    por si quieres hacerte una idea de las
+                    posibilidades antes de venir.
+                  %li.faq-list-question
+                    ¿Puedo dejar el equipo en el local?
+                  %p.faq-list-response
+                    Por supuesto, no hay problema.
+                  %li.faq-list-question
+                    ¿De qué servicios dispone el local?
+                  %p.faq-list-response
+                    Tenemos wi-fi y electricidad asegurados todo el fin de semana, cuarto de baño, pufs y zona de office con bebidas y snacks.
+                  %li.faq-list-question
+                    ¿Hay hoteles y restaurantes cerca?
+                  %p.faq-list-response
+                    coSfera está situado en el centro de la ciudad, hay hoteles y restaurantes por todas partes, pero estamos
+                    trabajando para poder ofrecer todas la comidas del fin de semana y que no tengas que preocuparte.
+                    Si vienes de fuera estamos negociando ofertas con alojamientos cercanos.
+                  %li.faq-list-question
+                    Soy alergico a _______, ¿qué opciones tengo de comida?
+                  %p.faq-list-response
+                    Envíanos un email a
+                    %a.main-text-link{ href: "mailto:devsdungeons@gmail.com", title: "Envía tus dudas a devsdungeons@gmail.com" }
+                      devsdungeons@gmail.com
+                    con la información al respecto y buscaremos una solución.
+                  %li.faq-list-question
+                    ¿Dónde puedo sacar mi entrada?
+                  %p.faq-list-response
+                    Pincha
+                    %a.main-text-link{ href: "#", title: "", target: "_blank" }
+                      aquí
+                    para reservar tu entrada.
+          %p.section-info
+            ¿No encuentras respuestas a tus dudas? Entra en nuestro
+            %a.main-text-link{ href: "https://groups.google.com/d/forum/devsdungeonsggj", title: "Grupo de Google de Game Jam ODB", target: "_blank" }
+              grupo de Google
+            para preguntar y ver las preguntas de otros interesados, o mándanos un correo a
+            %a.main-text-link{ href: "mailto:devsdungeons@gmail.com", title: "Envía tus dudas a devsdungeons@gmail.com" }
+              devsdungeons@gmail.com
+            , y te responderemos cuanto antes.
           %hr.invisible-section-hr
 
     -# FOOTER
 
     %footer.section.footer
       .row
+        .four.columns.footer-container
+          %h3.footer-title
+            CONTACTO
+          %p.footer-info
+            Puedes contactarnos en el
+            %a.main-text-link
+              grupo de Google
+            que hemos habilitado para este fin o a través de nuestro
+            %a.main-text-link
+              email
+            = ". También puedes seguirnos en"
+            %a.main-text-link
+              Twitter
+            y no perderte nada.
+        .four.columns.footer-container
+          %h3.footer-title
+            ENTRADAS
+          %p.footer-info
+            ¿Aún te lo estás pensando? ¡Lo peor que puede pasar es que hagas tu propio videojuego!
+          .footer-center
+            %a.button{ href: "#", title: "Reserva tus entradas en Eventbrite.", target: "_blank" }
+              ENTRADAS
+        .four.columns.footer-container
+          %h3.footer-title
+            COMPARTE
+          %p.footer-info
+            Sería ideal si nos compartes con tus amigos y nos ayudas a difundir el evento. ¡Gracias!
+          .footer-center
+            %a#twitter-share-button{ "data-url" =>"http://www.gamejamodb.com", "data-text" => "Game Jam ODB, la primera Game Jam de Córdoba (España)", "data-via" => "gamejamodb", "data-hashtags" => "gamejamodb" }
+              %img{ src: "img/share-tw.svg" }
+            -#%img{ src: "img/share-fb.svg" }

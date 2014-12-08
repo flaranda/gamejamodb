@@ -1,6 +1,26 @@
 .footer
-  background-color: #222
+  background-color: $salmon
+  background-image: url( "../img/footer.svg" )
+  background-position: center
+  background-size: 3100px
+  background-position-y: 0em
+  @include respond(all-phones)
+    background-position-x: -25em
+  padding-bottom: 2em
+  padding-top: 15em
+
+.footer-container
+  text-align: left
   padding-bottom: 2em
 
-  .section-title
-    color: white
+.footer-title
+  @include montserrat-bold( $main-text )
+  color: white
+
+.footer-info
+  @include arvo-italic( $main-text )
+  color: white
+  padding-bottom: 2em
+
+.footer-center
+  text-align: center
