@@ -63,6 +63,13 @@ module.exports = function( grunt ) {
         src: "*",
         dest: "compiled/js",
         filter: "isFile"
+      },
+      sitemap: {
+        expand: true,
+        cwd: "src/",
+        src: "sitemap.xml",
+        dest: "compiled/",
+        filter: "isFile"
       }
     },
     watch: {
