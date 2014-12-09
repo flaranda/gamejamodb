@@ -1,6 +1,8 @@
 .presentation
   background-image: url( "../img/bg.svg" )
+  background-color: $salmon
   background-position: center
+  background-repeat: no-repeat
   @include respond(desktop)
     background-size: 3100px
   @include respond(all-phones)
@@ -26,6 +28,7 @@
     padding-bottom: 2em
 
 .presentation-tickets
+  text-align: center
   @include respond( desktop )
     padding-bottom: 4em
   @include respond( all-phones )

@@ -1,10 +1,15 @@
-%html
+%html{ lang: "es" }
   %head
     %meta{ content: "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
-    %meta{ content: "width=device-width, initial-scale=1", name: "viewport" }
+    %meta{ content: "width=device-width, initial-scale=1, maximum-scale=1.0", name: "viewport" }
     %meta{ content: "Game Jam ODB", name: "title" }
-    %meta{ content: "", name: "keywords" }
-    %meta{ content: "", name: "description" }
+    %meta{ content: "Game Jam, Córdoba, España, videojuegos, maratón, 48 horas, desarollo, Global Game Jam", name: "keywords" }
+    %meta{ content: "Desarrolla tu propio videojuego en 48 horas en Córdoba (España)", name: "description" }
+    %meta{ content: "ES-CO", name: "geo.region" }
+    %meta{ content: "http://www.gamejamodb.com/img/promo.png", property: "og:image" }
+    %meta{ content: "Game Jam ODB", property: "og:site_name" }
+    %meta{ content: "Desarrolla tu propio videojuego en 48 horas en Córdoba (España)", property: "og:description" }
+    %meta{ content: "http://www.gamejamodb.com", property: "og:url" }
     %link{ type: "text/css", rel: "stylesheet", media: "all", href: "css/application.min.css" }
     %link{ rel: "shortcut icon", href: "img/favicon.ico" }
     %script{ type: "text/javascript", src: "js/jquery-2.0.2.min.js" }
@@ -255,7 +260,7 @@
                     %li
                       %span.program-schedule-list-hour
                         09:00 -
-                      Apertura de coSfera y desayuno patrocinado.
+                      Apertura de coSfera y desayuno.
                     %li
                       %span.program-schedule-list-hour
                         DESARROLLO A TOPE.
@@ -271,7 +276,7 @@
                     %li
                       %span.program-schedule-list-hour
                         09:00 -
-                      Apertura de coSfera y desayuno patrocinado.
+                      Apertura de coSfera y desayuno.
                     %li
                       %span.program-schedule-list-hour
                         ÚLTIMA ETAPA DE DESARROLLO.
@@ -325,7 +330,7 @@
                   DORMIR
                 %p.program-details-info
                   ¿Vienes de fuera? Estamos buscando convenios que nos ofrezcan precios especiales con alojamientos cercanos.
-                  %a.main-text-link{ href: "mailto:devsdungeons@gmail.com", title: "Escríbenos y te ayudaremos a buscar alojamiento." }
+                  %a.program-link{ href: "mailto:devsdungeons@gmail.com", title: "Escríbenos y te ayudaremos a buscar alojamiento." }
                     Escríbenos
                   y te echaremos una mano.
           %hr.invisible-section-hr
@@ -499,10 +504,17 @@
                   %img.social-link-image{ src: "img/social-tw.svg", alt: "Twitter de coSfera" }
               .organizer-bio
                 %p
-                  Somos una comunidad de gente que podría trabajar desde cualquier sitio, pero que prefiere desarrollar su trabajo acompañada y
-                  de una forma más productiva en coSfera.
-                  Porque coSfera es una plataforma para la comunidad de profesionales independientes y emprendedores locales enfocados en la
-                  innovación tecnológica y social donde conectar, inspirar y transformar.
+                  coSfera es el
+                  %strong.organizer-bio-strong
+                    primer espacio de coworking de Córdoba,
+                  un espacio de trabajo compartido, una alternativa a la oficina clásica y a trabajar en casa,
+                  %strong.organizer-bio-strong
+                    para profesionales libres y microempresas,
+                  que podrían trabajar desde cualquier sitio, pero que prefieren
+                  hacerlo
+                  %strong.organizer-bio-strong
+                    acompañados
+                  y de una forma más productiva en coSfera
           %hr.invisible-section-hr
 
 
@@ -513,7 +525,12 @@
           %h2.section-title
             FAQ
           %p.section-info
-            ¿Tienes alguna duda? Vamos a intentar resolverla...
+            ¿Tienes alguna duda? Vamos a intentar resolverlas. Si no encuentras lo que buscas, pregunta en nuestro
+            %a.white-link{ href: "https://groups.google.com/d/forum/devsdungeonsggj", title: "Grupo de Google de Game Jam ODB", target: "_blank" }
+              grupo de Google
+            , o mándanos un correo a
+            %a.white-link{ href: "mailto:devsdungeons@gmail.com", title: "Envía tus dudas a devsdungeons@gmail.com" }
+              devsdungeons@gmail.com
           .row
             .six.columns.faq-column
               .faq-container
@@ -523,6 +540,13 @@
                   %p.faq-list-response
                     No hay limitaciones en este sentido, mientras puedas elegir un rol (programador, grafista o compositor) te
                     animamos a que lo intentes :)
+                  %li.faq-list-question
+                    Mis habilidades no encajan en ningún rol, ¿puedo participar?
+                  %p.faq-list-response
+                    En principio los roles más necesarios son programador, grafista y compositor. Si no te ajustas a ninguno y aún así
+                    te gustaría participar en Game Jam ODB, mandanos un correo a
+                    %a.main-text-link{ href: "mailto:devsdungeons@gmail.com", title: "Envía tus dudas a devsdungeons@gmail.com" }
+                      devsdungeons@gmail.com.
                   %li.faq-list-question
                     ¿Qué herramientas de trabajo puedo llevar?
                   %p.faq-list-response
@@ -538,13 +562,17 @@
                     Sí. La idea es que tu equipo sea autosuficiente y no los necesitéis. En el caso de usarlos, tu equipo no podrá optar a los
                     premios de la categoría correspondiente a esos assets.
                   %li.faq-list-question
+                    ¿Los assets y el videojuego que haga son de mi propiedad?
+                  %p.faq-list-response
+                    Por supuesto. Tanto los assets como el juego hagáis tu grupo y tu son de vuestra propiedad en todo momento.
+                  %li.faq-list-question
                     ¿Puedo traer material ya hecho?
                   %p.faq-list-response
                     No te lo vamos a impedir, pero esa no es la filosofía de una Game Jam. La idea es que pruebes a desarrollar tu juego desde 0 en 48h.
                   %li.faq-list-question
-                    ¿Puedo traer mi propio equipo formado?
+                    ¿Puedo traer mi propio grupo formado?
                   %p.faq-list-response
-                    No, los equipos los forma la organización teniendo en cuenta las habilidades de la gente para hacer un reparto equitativo
+                    No, los grupos los forma la organización teniendo en cuenta las habilidades de la gente para hacer un reparto equitativo
                     de los recursos humanos. ¡Conocer gente nueva forma parte de la experiencia!
                   %li.faq-list-question
                     ¿Habrá premios?
@@ -552,9 +580,38 @@
                     Sí, habrá una entrega de premios el domingo por la tarde para reconocer simbólicamente el MEJOR JUEGO, MEJOR CONCEPTO,
                     MEJORES GRÁFICOS, MEJOR SONIDO, y la MENCIÓN ESPECIAL DEL PÚBLICO. Recordamos que el evento no es competitivo y que
                     la finalidad es aprender y pasarlo bien.
+                  %li.faq-list-question
+                    ¿Hay requisitos para optar a los premios?
+                  %p.faq-list-response
+                    Si. Todos los juegos deben cumplir los siguientes requisitos para optar a cualquiera de los premios:
+                    %ul.faq-req
+                      %li.faq-req-item
+                        Respetar la temática elegida por la organización de Global Game Jam.
+                      %li.faq-req-item
+                        Estar subido a la plataforma de Global Game Jam en el horario establecido.
+                      %li.faq-req-item
+                        Estar terminado y tener al menos una pantalla de inicio, un nivel jugable, y una pantalla de game over.
+                      %li.faq-req-item
+                        Los juegos que utilicen assets externos no podrán optar a los premios de la categoría correspondiente.
+                      %li.faq-req-item
+                        El jurado debe ser capaz de jugar a los juegos independientemente de
+                        la plataforma de desarrollo, encárgate de proporcionar el hardware o emulador necesario.
             .six.columns.faq-column
               .faq-container.right-faq-container
                 %ul.faq-list
+                  %li.faq-list-question
+                    ¿Hay que cumplir algunas normas en el local?
+                  %p.faq-list-response
+                    Solo imponemos unas cuantas normas de comportamiento que estamos seguros que no te costará nada de nada cumplir:
+                    %ul.faq-req
+                      %li.faq-req-item
+                        Respeta el ritmo de trabajo de tus compañeros y fomenta un ambiente de trabajo agradable.
+                      %li.faq-req-item
+                        Manten un comportamiento cívico en coSfera. ¡Si nos portamos mal y les ensuciamos el local no querrán repetir!
+                      %li.faq-req-item
+                        Por la noche debemos procurar no hacer ruido en las inmediaciones para no molestar a los vecinos.
+                      %li.faq-req-item
+                        Prohibido estresarse. Obligatorio pasarlo bien y aprender.
                   %li.faq-list-question
                     ¿Qué es un coach?
                   %p.faq-list-response
@@ -563,8 +620,8 @@
                       coaches
                     son profesionales del séctor de los videojuegos que te acompañarán durante el fin de semana para ayudarte
                     a resolver atascos de diferente índole en el proceso de desarrollo. También ejercerán de jurado de cara a los premios.
-                    Aprovecha para preguntarles lo que quieras y hablar con ellos, es una gran oportunidad poder contar con ellos y obtener
-                    información del séctor de primera mano.
+                    Aprovecha para preguntarles lo que quieras y hablar con ellos, es una gran oportunidad tenerlos entre nosotros y obtener
+                    información del sector de primera mano.
                   %li.faq-list-question
                     ¿Cómo se llega a coSfera?
                   %p.faq-list-response
@@ -584,7 +641,7 @@
                   %li.faq-list-question
                     ¿Puedo dejar el equipo en el local?
                   %p.faq-list-response
-                    Por supuesto, no hay problema.
+                    Por supuesto, no hay problema. El local cerrará por completo durante la noche y está provisto de sistema antirrobo.
                   %li.faq-list-question
                     ¿De qué servicios dispone el local?
                   %p.faq-list-response
@@ -609,14 +666,6 @@
                     %a.main-text-link{ href: "#", title: "", target: "_blank" }
                       aquí
                     para reservar tu entrada.
-          %p.section-info
-            ¿No encuentras respuestas a tus dudas? Entra en nuestro
-            %a.main-text-link{ href: "https://groups.google.com/d/forum/devsdungeonsggj", title: "Grupo de Google de Game Jam ODB", target: "_blank" }
-              grupo de Google
-            para preguntar y ver las preguntas de otros interesados, o mándanos un correo a
-            %a.main-text-link{ href: "mailto:devsdungeons@gmail.com", title: "Envía tus dudas a devsdungeons@gmail.com" }
-              devsdungeons@gmail.com
-            , y te responderemos cuanto antes.
           %hr.invisible-section-hr
 
     -# FOOTER
@@ -654,3 +703,11 @@
             %a#twitter-share-button{ "data-url" =>"http://www.gamejamodb.com", "data-text" => "Game Jam ODB, la primera Game Jam de Córdoba (España)", "data-via" => "gamejamodb", "data-hashtags" => "gamejamodb" }
               %img{ src: "img/share-tw.svg" }
             -#%img{ src: "img/share-fb.svg" }
+      .row
+        .made-by
+          DISEÑADO Y DESARROLLADO POR
+          %a.made-by-violeta{ href: "http://violetacejas.com", title: "Página web de Violeta Cejas", target: "_blank" }
+            VIOLETA CEJAS
+          &
+          %a.made-by-fran{ href: "https://www.linkedin.com/pub/francisco-luis-aranda-garc%C3%ADa/51/374/718", title: "Linkedin de Francisco Aranda", target: "_blank" }
+            FRANCISCO ARANDA
