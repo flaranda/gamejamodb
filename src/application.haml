@@ -7,6 +7,7 @@
     %meta{ content: "Desarrolla tu propio videojuego en 48 horas en Córdoba (España)", name: "description" }
     %meta{ content: "ES-CO", name: "geo.region" }
     %meta{ content: "http://www.gamejamodb.com/img/promo.png", property: "og:image" }
+    %meta{ content: "Game Jam ODB", property: "og:title" }
     %meta{ content: "Game Jam ODB", property: "og:site_name" }
     %meta{ content: "Desarrolla tu propio videojuego en 48 horas en Córdoba (España)", property: "og:description" }
     %meta{ content: "http://www.gamejamodb.com", property: "og:url" }
@@ -701,8 +702,9 @@
             Sería ideal si nos compartes con tus amigos y nos ayudas a difundir el evento. ¡Gracias!
           .footer-center
             %a#twitter-share-button{ "data-url" =>"http://www.gamejamodb.com", "data-text" => "Game Jam ODB, la primera Game Jam de Córdoba (España)", "data-via" => "gamejamodb", "data-hashtags" => "gamejamodb" }
-              %img{ src: "img/share-tw.svg" }
-            -#%img{ src: "img/share-fb.svg" }
+              %img.social-image{ src: "img/share-tw.svg" }
+            %a#facebook-share-button{ "data-url" => "http://www.gamejamodb.com" }
+              %img.social-image{ src: "img/share-fb.svg" }
       .row
         .made-by
           DISEÑADO Y DESARROLLADO POR
@@ -711,3 +713,4 @@
           &
           %a.made-by-fran{ href: "https://www.linkedin.com/pub/francisco-luis-aranda-garc%C3%ADa/51/374/718", title: "Linkedin de Francisco Aranda", target: "_blank" }
             FRANCISCO ARANDA
+    #fb-root
