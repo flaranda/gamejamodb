@@ -42,7 +42,14 @@
   color: white
   opacity: 1
   cursor: pointer
-  &:hover
-    color: $emerald
-  &.selected
-    color: $emerald
+  @include respond(desktop)
+    &:hover
+      color: $emerald
+  @include respond(all-phones)
+    &:active
+      color: $emerald
+    &:hover
+      color: white
+
+.navigation-link-selected
+  color: $emerald

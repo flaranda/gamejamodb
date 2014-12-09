@@ -84,6 +84,14 @@ a
   width: 15em
   max-width: 100%
   margin: 0 auto
+  @include respond(desktop)
+    &:hover
+      color: $gray-text
+  @include respond(all-phones)
+    &:active
+      color: $gray-text
+    &:hover
+      color: white
 
 .social-links
   padding-top: 1em
@@ -100,10 +108,22 @@ a
 
 .main-text-link
   color: $emerald
-  &:hover
-    color: $green
+  @include respond(desktop)
+    &:hover
+      color: $green
+  @include respond(all-phones)
+    &:active
+      color: $green
+    &:hover
+      color: $emerald
 
 .white-link
   color: white
-  &:hover
-    color: $gray-text
+  @include respond(desktop)
+    &:hover
+      color: $gray-text
+  @include respond(all-phones)
+    &:active
+      color: $gray-text
+    &:hover
+      color: white

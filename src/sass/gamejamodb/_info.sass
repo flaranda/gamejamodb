@@ -71,9 +71,12 @@
   @include arvo-italic( $main-text )
   text-align: left
   color: $gray-text
-  padding-bottom: 1em
-  &:last-child
-    padding-bottom: 0em
+  @include respond(desktop)
+    padding-bottom: 1em
+    &:last-child
+      padding-bottom: 0em
+  @include respond(all-phones)
+    padding-bottom: 1em
 
 .bubble-info-big-dates
   font-size: $main-text + 0.8em

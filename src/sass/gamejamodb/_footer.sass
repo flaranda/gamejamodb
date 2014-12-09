@@ -1,14 +1,15 @@
 .footer
   background-color: $salmon
   background-image: url( "../img/footer.svg" )
-  background-position: center
+  background-position: center 0
   background-size: 3100px
   background-repeat: no-repeat
-  background-position-y: 0em
-  @include respond(all-phones)
-    background-position-x: -25em
   padding-bottom: 2em
   padding-top: 15em
+  @include respond(desktop)
+    background-position: center 0
+  @include respond(all-phones)
+    background-position: -25em 0
 
 .footer-container
   text-align: left
@@ -33,17 +34,28 @@
 
 .made-by-violeta
   color: $pink
-  &:hover
-    color: $pink
-  &:active
-    color: $pink
+  @include respond(desktop)
+    &:hover
+      color: $pink
+  @include respond(all-phones)
+    &:active
+      color: $pink
+    &:hover
+      color: $pink
 
 .made-by-fran
   color: $emerald
-  &:hover
-    color: $emerald
-  &:active
-    color: $emerald
+  @include respond(desktop)
+    &:hover
+      color: $emerald
+  @include respond(all-phones)
+    &:active
+      color: $emerald
+    &:hover
+      color: $emerald
 
 .social-image
-  width: 45%
+  @include respond(desktop)
+    width: 45%
+  @include respond(all-phones)
+    width: 7em
