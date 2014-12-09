@@ -70,5 +70,11 @@
 
 .program-link
   color: $red
-  &:hover
-    color: $wine
+  @include respond(desktop)
+    &:hover
+      color: $wine
+  @include respond(all-phones)
+    &:active
+      color: $wine
+    &:hover
+      color: $red
