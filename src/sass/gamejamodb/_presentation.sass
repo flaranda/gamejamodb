@@ -6,7 +6,7 @@
     background-size: 3100px
     background-position: center
   @include respond(all-phones)
-    background-size: 1700px auto
+    background-size: 2100px auto
     background-position: center 1em
 
 .presentation-image
@@ -52,9 +52,17 @@
 .presentation-organizer
   &:first-child
     padding-right: 2em
+  &:last-child
+    padding-right: 0em
 
 .presentation-organizer-image
   @include respond(desktop)
     width: 8em
   @include respond(all-phones)
     width: 5em
+
+.presentation-organizer-uco
+  @include respond(desktop)
+    width: 15em
+  @include respond(all-phones)
+    width: 10em
