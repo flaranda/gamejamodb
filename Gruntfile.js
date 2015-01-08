@@ -24,7 +24,7 @@ module.exports = function( grunt ) {
           cwd: 'compiled/css/',
           src: ['*.css', '!*.min.css'],
           dest: 'compiled/css/',
-          ext: '.min.css'
+          ext: '.css'
         }]
       }
     },
@@ -38,7 +38,7 @@ module.exports = function( grunt ) {
     uglify: {
       min: {
         files: {
-          "compiled/js/application.min.js": "compiled/js/application.js"
+          "compiled/js/application.js": "compiled/js/application.js"
         }
       }
     },
