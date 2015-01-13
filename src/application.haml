@@ -68,22 +68,23 @@
             %a.button{ href: "http://gamejamodb2015.eventbrite.es", title: "Reserva tus entradas en Eventbrite.", target: "_blank" }
               ENTRADAS
           .row
-            .six.columns
-              .presentation-organize
-                ORGANIZA
-              .row.presentation-organizers
-                %span.presentation-organizer
-                  %img.presentation-organizer-image{ src: "img/dd-logo-negativo.svg", alt: "Devs&Dungeons organizador de Game Jam ODB." }
-                %span.presentation-organizer
-                  %img.presentation-organizer-image{ src: "img/cosfera-logo-negativo.svg", alt: "coSfera organizador de Game Jam ODB." }
-            .six.columns
-              .presentation-organize
-                PATROCINA
-              .row.presentation-organizers
-                %span.presentation-organizer
-                  %img.presentation-organizer-image{ src: "img/consejo-social-uco.svg", alt: "Consejo Social de la Universidad de Córdoba patrocinador de Game Jam ODB." }
-                %span.presentation-organizer
-                  %img.presentation-organizer-image{ src: "img/casares-logo-negativo.svg", alt: "Fotograbados Casares SL patrocinador de Game Jam ODB." }
+            .presentation-organize
+              ORGANIZA
+            .row.presentation-organizers
+              %span.presentation-organizer
+                %img.presentation-organizer-image{ src: "img/dd-logo-negativo.svg", alt: "Devs&Dungeons organizador de Game Jam ODB." }
+              %span.presentation-organizer
+                %img.presentation-organizer-image{ src: "img/cosfera-logo-negativo.svg", alt: "coSfera organizador de Game Jam ODB." }
+          .row
+            .presentation-sponsorize
+              PATROCINA
+            .row.presentation-sponsors
+              %span.presentation-sponsor
+                %img.presentation-sponsor-image{ src: "img/consejo-social-uco.svg", alt: "Consejo Social de la Universidad de Córdoba patrocinador de Game Jam ODB." }
+              %span.presentation-sponsor
+                %img.presentation-sponsor-image{ src: "img/rabanales21-logo-negativo.svg", alt: "Rabanales 21 patrocinador de Game Jam ODB." }
+              %span.presentation-sponsor
+                %img.presentation-sponsor-image{ src: "img/casares-logo-negativo.svg", alt: "Fotograbados Casares SL patrocinador de Game Jam ODB." }
 
 
       -# INFO SECTION
@@ -236,9 +237,6 @@
               %h3.program-schedule-title
                 HORARIO
               .program-schedule-info
-                %p
-                  Este horario es provisional, según vayamos confirmando comidas patrocinadas y charlas de los coaches se irán
-                  realizando algunos cambios.
                 %div
                   .program-schedule-day
                     VIERNES 23 ENERO
@@ -247,15 +245,30 @@
                     %li
                       %span.program-schedule-list-hour
                         16:00 -
-                      Check in.
+                      Recepción de los participantes.
                     %li
                       %span.program-schedule-list-hour
-                        17:00 -
-                      Presentación, normas, y formación de equipos.
+                        16:30 -
+                      Presentación del evento.
+                    %li
+                      %span.program-schedule-list-hour
+                        16:45 -
+                      Charlas de introducción.
+                    %li
+                      %span.program-schedule-list-hour
+                        17:45 -
+                      Formación de equipos.
                     %li
                       %span.program-schedule-list-hour
                         18:00 -
                       Anuncio del tema e inicio de Game Jam ODB.
+                    %li
+                      %span.program-schedule-list-hour
+                        DESARROLLO A TOPE.
+                    %li
+                      %span.program-schedule-list-hour
+                        21:00 -
+                      Cena patrocinada.
                     %li
                       %span.program-schedule-list-hour
                         DESARROLLO A TOPE.
@@ -271,7 +284,25 @@
                     %li
                       %span.program-schedule-list-hour
                         09:00 -
-                      Apertura de coSfera y desayuno.
+                      Apertura de coSfera.
+                    %li
+                      %span.program-schedule-list-hour
+                        09:15 -
+                      Desayuno buffet.
+                    %li
+                      %span.program-schedule-list-hour
+                        DESARROLLO A TOPE.
+                    %li
+                      %span.program-schedule-list-hour
+                        14:30 -
+                      Almuerzo patrocinado.
+                    %li
+                      %span.program-schedule-list-hour
+                        DESARROLLO A TOPE.
+                    %li
+                      %span.program-schedule-list-hour
+                        21:00 -
+                      Cena patrocinada.
                     %li
                       %span.program-schedule-list-hour
                         DESARROLLO A TOPE.
@@ -287,17 +318,28 @@
                     %li
                       %span.program-schedule-list-hour
                         09:00 -
-                      Apertura de coSfera y desayuno.
+                      Apertura de coSfera.
                     %li
                       %span.program-schedule-list-hour
-                        ÚLTIMA ETAPA DE DESARROLLO.
+                        09:15 -
+                      Desayuno buffet.
+                    %li
+                      %span.program-schedule-list-hour
+                        DESARROLLO A TOPE.
+                    %li
+                      %span.program-schedule-list-hour
+                        14:30 -
+                      Almuerzo patrocinado.
+                    %li
+                      %span.program-schedule-list-hour
+                        DESARROLLO A TOPE.
                     %li
                       %span.program-schedule-list-hour
                         17:00 -
-                      Subida de juegos a la página de Global Game Jam.
+                      Hora tope para subir los juegos a Global Game Jam.
                     %li
                       %span.program-schedule-list-hour
-                        17:00 a 19:00 -
+                        17:30 -
                       Momento de relax para probar los juegos.
                     %li
                       %span.program-schedule-list-hour
@@ -335,7 +377,12 @@
                   Con tu entrada tienes
                   %strong
                     incluidos los desayunos.
-                  Y no solo eso, estamos buscando patrocinio para todas las comidas y cenas. ¡Estad atentos!
+                  Y no solo eso, gracias a nuestros
+                  %a.program-link{ title: "Patrocinadores de Game Jam ODB", "data-scroll" => "presentation" }
+                    patrocinadores
+                  podrás disfrutar
+                  %strong
+                    todos los almuerzos y cenas del fin de semana GRATIS.
               .program-details
                 %h3.program-details-title
                   DORMIR
@@ -591,7 +638,7 @@
                   %li.faq-list-question
                     ¿Los assets y el videojuego que haga son de mi propiedad?
                   %p.faq-list-response
-                    Por supuesto. Tanto los assets como el juego hagáis tu grupo y tu son de vuestra propiedad en todo momento.
+                    Por supuesto. Tanto los assets como el juego que hagáis en tu grupo son de vuestra propiedad en todo momento.
                   %li.faq-list-question
                     ¿Puedo traer material ya hecho?
                   %p.faq-list-response

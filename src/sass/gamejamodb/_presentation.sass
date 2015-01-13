@@ -10,7 +10,7 @@
     background-position: center 1em
 
 .presentation-image
-  padding-top: 8.5em
+  padding-top: 4em
   padding-bottom: 1em
   @include respond(all-phones)
     display: none
@@ -30,7 +30,7 @@
 .presentation-tickets
   text-align: center
   @include respond( desktop )
-    padding-bottom: 4em
+    padding-bottom: 2em
   @include respond( all-phones )
     padding-bottom: 2em
 
@@ -39,19 +39,18 @@
   letter-spacing: $letter-spacing-discrete
   color: $white
   @include respond(desktop)
-    padding-bottom: 2em
+    padding-bottom: 1em
   @include respond(all-phones)
     padding-bottom: 1em
 
 .presentation-organizers
   @include respond(desktop)
-    padding-bottom: 3.5em
+    padding-bottom: 1em
   @include respond(all-phones)
     padding-bottom: 1em
 
 .presentation-organizer
-  &:first-child
-    padding-right: 2em
+  padding-right: 2em
   &:last-child
     padding-right: 0em
 
@@ -61,8 +60,28 @@
   @include respond(all-phones)
     width: 5em
 
-.presentation-organizer-uco
+.presentation-sponsorize
+  @include montserrat-regular( $presentation-organize )
+  letter-spacing: $letter-spacing-discrete
+  color: $white
   @include respond(desktop)
-    width: 15em
+    padding-bottom: 1em
   @include respond(all-phones)
-    width: 10em
+    padding-bottom: 1em
+
+.presentation-sponsors
+  @include respond(desktop)
+    padding-bottom: 3.5em
+  @include respond(all-phones)
+    padding-bottom: 1em
+
+.presentation-sponsor
+  padding-right: 2em
+  &:last-child
+    padding-right: 0em
+
+.presentation-sponsor-image
+  @include respond(desktop)
+    width: 8em
+  @include respond(all-phones)
+    width: 5em
