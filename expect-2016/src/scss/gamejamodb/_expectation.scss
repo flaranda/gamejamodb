@@ -1,0 +1,92 @@
+.expectation-title {
+    display: none;
+}
+
+.expectation-background {
+    background-color: black;
+}
+
+.expectation-fs {
+    height: calc( 100vh - 100px );
+    min-height: 600px;
+
+    @include respond( phones ) {
+        height: inherit;
+        min-height: inherit;
+        padding-top: 50px;
+    }
+}
+
+.expectation-gamejam-logo {
+    width: 180px;
+
+    @include respond( phones ) {
+        width: 100px;
+    }
+}
+
+.expectation-gamejam-date {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+
+    @include respond( phones ) {
+        font-size: 2rem;
+    }
+}
+
+.expectation-cta-text {
+    text-align: center;
+    color: white;
+
+    @include respond( phones ) {
+        font-size: 1.5rem;
+    }
+}
+
+#countdown {
+    color: white;
+    text-align: center;
+    font-size: 10rem;
+
+    @include respond( phones ) {
+        font-size: 5rem;
+    }
+}
+
+.expectation-organizers {
+    height: 100px;
+
+    @include respond( phones )  {
+        height: inherit;
+        margin-bottom: 20px;
+    }
+}
+
+.expectation-organizer {
+    text-align: center;
+}
+
+.expectation-organizer img {
+    height: 70%;
+
+    @include respond( phones ) {
+        width: 40%;
+        height: auto;
+    }
+}
+
+.expectation-tickets {
+    text-align: center;
+    display: none;
+}
+
+.expectation-tickets img {
+    width: 300px;
+
+    @include respond( phones ) {
+        width: 200px;
+        margin-bottom: 50px;
+    }
+}

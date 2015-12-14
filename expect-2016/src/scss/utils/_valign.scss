@@ -1,0 +1,12 @@
+.valign-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include prefix( align-items, center, webkit moz ms o );
+}
+
+.valign-wrapper .valign {
+    display: block;
+}
