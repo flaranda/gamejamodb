@@ -1,0 +1,55 @@
+.navigation
+  background-color: $header-black
+  padding-top: 1em
+  padding-bottom: 1em
+  position: fixed
+  width: 100%
+  z-index: 2
+
+.navigation-menu
+  @include respond(desktop)
+    display: block !important
+  @include respond(all-phones)
+    display: none
+
+.navigation-accordion-left
+  text-align: left
+  float: left
+  img
+    width: 14em
+
+.navigation-accordion-right
+  text-align: right
+  float: right
+  img
+    width: 1.5em
+
+.navigation-item
+  @include montserrat-regular( $navigation-item )
+  letter-spacing: $navigation-item-letter-spacing
+  @include respond(desktop)
+    padding-right: 3em
+    &:last-child
+      padding-right: 0em
+  @include respond(all-phones)
+    display: block
+    text-align: left
+    padding-top: 1em
+    &:first-child
+      padding-top: 2em
+
+.navigation-link
+  color: white
+  opacity: 1
+  cursor: pointer
+  @include respond(desktop)
+    &:hover
+      color: $blue-link
+  @include respond(all-phones)
+    &:active
+      color: $blue-link
+    &:hover
+      color: white
+
+.navigation-link-selected
+  color: $blue-link

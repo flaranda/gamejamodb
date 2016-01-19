@@ -1,0 +1,43 @@
+.faq
+  background-color: $blue-faq
+
+.faq-column
+  &:first-child
+    padding-right: 1em
+  &:last-child
+    padding-left: 1em
+
+.faq-container
+  background-color: white
+  @include allbrow( border-radius, 25px )
+  padding: 2em
+  text-align: left
+
+.right-faq-container
+  @include respond( all-phones )
+    margin-top: -4em
+
+.faq-list
+  list-style-type: disc
+  list-style-position: outside
+  padding-left: 1em
+
+.faq-list-question
+  @include montserrat-bold( $main-text )
+  color: $black
+
+.faq-list-response
+  @include arvo-italic( $main-text )
+  color: $black
+  padding-bottom: 2em
+
+.faq-req
+  margin-top: -1em
+  list-style-type: circle
+  list-style-position: outside
+
+.faq-req-item
+  @include arvo-italic( $main-text )
+  color: $black
+  &:last-child
+    padding-bottom: 2em

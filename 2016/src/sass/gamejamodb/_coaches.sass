@@ -1,0 +1,43 @@
+.coaches
+  @include respond( desktop )
+    padding-bottom: 2em
+  @include respond( all-phones )
+    padding-bottom: 0em
+
+.coaches .social-links
+  min-height: 70px
+
+.coach
+  @include respond( desktop )
+    padding-left: 1em
+    padding-right: 1em
+  @include respond( all-phones )
+    padding-left: 0em
+    padding-right: 0em
+    padding-bottom: 2em !important
+
+.last-coach
+  @include respond( all-phones )
+    padding-bottom: 0em !important
+
+.coach-image-container
+  text-align: center
+  width: 70%
+  margin: 0 auto
+
+.coach-image
+  border: 10px solid $brown
+  @include allbrow( border-radius, 50% )
+
+.coach-name
+  @include montserrat-bold( $coach-name )
+  padding-top: 1em
+
+.coach-bio
+  @include arvo-italic( $main-text )
+  color: $black
+  text-align: left
+  padding-bottom: 1em
+  @include respond(all-phones)
+    padding-left: 1em
+    padding-right: 1em

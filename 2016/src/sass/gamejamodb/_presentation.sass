@@ -1,0 +1,98 @@
+.presentation
+  background-color: $blue-faq
+  background-repeat: no-repeat
+  @include respond(desktop)
+    background-image: url( "../img/bg.svg" )
+    height: 625px
+    background-position: center
+    background-size: cover
+  @include respond(all-phones)
+    height: 590px
+    background-image: url( "../img/mobile.svg" )
+    background-position: center
+
+.presentation-image
+  padding-top: 4em
+  padding-bottom: 3em
+  @include respond(all-phones)
+    display: none
+
+.presentation-title
+  position: 0 -1000px
+
+.presentation-info
+  @include arvo-italic( $presentation-info )
+  color: $dark-blue-text
+  @include respond(desktop)
+    padding-bottom: 2em
+  @include respond(all-phones)
+    padding-top: 0em
+    padding-bottom: 2em
+
+.presentation-tickets
+  text-align: center
+  @include respond( desktop )
+    padding-bottom: 1em
+  @include respond( all-phones )
+    padding-bottom: 1em
+    padding-top: 160px
+
+.presentation-organize
+  @include montserrat-regular( $presentation-organize )
+  letter-spacing: $letter-spacing-discrete
+  color: $dark-blue-text
+  @include respond(desktop)
+    padding-bottom: 0em
+  @include respond(all-phones)
+    padding-bottom: 1em
+    padding-top: 40px
+
+.presentation-organizers
+  @include respond(desktop)
+    padding-bottom: 0em
+  @include respond(all-phones)
+    padding-bottom: 1em
+
+.presentation-organizer
+  padding-right: 2em
+  &:last-child
+    padding-right: 0em
+  @include respond(all-phones)
+    padding-right: 0.5em
+    &:last-child
+      padding-right: 0em
+
+.presentation-organizer-image
+  @include respond(desktop)
+    width: 8em
+  @include respond(all-phones)
+    width: 5em
+
+.presentation-sponsorize
+  @include montserrat-regular( $presentation-organize )
+  letter-spacing: $letter-spacing-discrete
+  color: $dark-blue-text
+  @include respond(desktop)
+    padding-bottom: 0em
+  @include respond(all-phones)
+    padding-bottom: 1em
+
+.presentation-sponsors
+  @include respond(desktop)
+    padding-bottom: 7em
+  @include respond(all-phones)
+    padding-bottom: 1em
+
+.presentation-sponsor
+  padding-right: 2em
+  &:last-child
+    padding-right: 0em
+
+.presentation-sponsor-image
+  @include respond(desktop)
+    width: 8em
+  @include respond(all-phones)
+    width: 5em
+
+.button.button-presentation-2016
+  background-color: $orange

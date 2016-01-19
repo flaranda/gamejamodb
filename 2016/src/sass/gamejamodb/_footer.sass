@@ -1,0 +1,81 @@
+.footer
+  background-color: $blue-faq
+  background-image: url( "../img/footer.svg" )
+  background-position: center -60px
+  background-repeat: no-repeat
+  padding-bottom: 2em
+  padding-top: 15em
+  margin-top: -1px
+  @include respond(desktop)
+    background-position: center 0
+
+.button.button-faq-2016
+  background-color: $dark-blue
+  @include respond(desktop)
+    &:hover
+      color: $white
+  @include respond(all-phones)
+    &:active
+      color: $white
+    &:hover
+      color: $white
+
+.footer-container
+  text-align: left
+  padding-bottom: 2em
+
+.footer-title
+  @include montserrat-bold( $main-text )
+  color: $dark-blue
+
+.footer-info
+  @include arvo-italic( $main-text )
+  color: $dark-blue
+  padding-bottom: 0.5em
+
+.footer-center
+  text-align: center
+
+.made-by
+  @include montserrat-regular( $made-by )
+  text-align: center
+  color: $blue-link
+
+.made-by-violeta
+  color: $dark-blue
+  @include respond(desktop)
+    &:hover
+      color: $dark-blue
+  @include respond(all-phones)
+    &:active
+      color: $dark-blue
+    &:hover
+      color: $dark-blue
+
+.made-by-fran
+  color: $dark-blue
+  @include respond(desktop)
+    &:hover
+      color: $dark-blue
+  @include respond(all-phones)
+    &:active
+      color: $dark-blue
+    &:hover
+      color: $dark-blue
+
+.made-by-dani
+  color: $dark-blue
+  @include respond(desktop)
+    &:hover
+      color: $dark-blue
+  @include respond(all-phones)
+    &:active
+      color: $dark-blue
+    &:hover
+      color: $dark-blue
+
+.social-image
+  @include respond(desktop)
+    width: 45%
+  @include respond(all-phones)
+    width: 7em

@@ -1,0 +1,29 @@
+.organizer-container
+  @include respond( desktop )
+    &:first-child
+      padding-right: 1em
+    &:last-child
+      padding-left: 1em
+  @include respond( all-phones )
+    &:first-child
+      padding-bottom: 3em !important
+
+.organizer-logo
+  width: 50%
+  text-align: left
+  padding-bottom: 1em
+
+.organizer-info
+  background-color: $gray
+
+.organizer-image
+  padding-top: 2em
+
+.organizer-bio
+  @include arvo-italic( $main-text )
+  color: $gray-text
+  padding: 1em
+  text-align: left
+
+.organizer-bio-strong
+  color: $black
